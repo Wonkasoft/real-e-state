@@ -118,6 +118,8 @@ function real_e_state_scripts() {
 		wp_enqueue_style( $style, get_template_directory_uri() . '/assets/css/bootstrap.min.css', '3.3.7', 'all' );
 	}
 
+	wp_enqueue_style( 'real-e-state-style', get_stylesheet_uri() );
+
 	// Check to see if bootstrap js is already enqueue before setting the enqueue
 	$bootstrapjs = 'bootstrap-js';
 	if ( ! wp_script_is( $bootstrapjs, 'enqueued')  &&  ! wp_script_is($bootstrapjs, 'done') ) {

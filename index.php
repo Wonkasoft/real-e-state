@@ -13,9 +13,11 @@
  */
 
 get_header(); ?>
-<main id="main">
+<main id="main" class="container-fluid">
+	<div class="row">
 
 
-</main>
+	</div><!-- .row -->
+</main><!-- #main -->
 <?php
 get_footer();
