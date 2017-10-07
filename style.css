@@ -1,7 +1,7 @@
 /**
  * 
  * Theme Name: Real E-state
- * Theme URI: http://underscores.me/
+ * Theme URI: http://#
  * Author: Wonkasoft
  * Author URI: https://wonkasoft.com
  * Description: The Real Estate theme for the Classy Agent
@@ -20,4 +20,4 @@
  */
 
 /*Import all of the minified css into the main style sheet*/
-@import './assets/css/style.min.css';
+@import 'assets/css/style.min.css';
