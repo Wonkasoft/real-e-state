@@ -12,6 +12,7 @@ fs = require('node-fs'),
 fse = require('fs-extra'),
 json = require('json-file'),
 uglify = require('gulp-uglify'),
+themeName = json.read('./package.json').get('name'),
 siteName = json.read('./package.json').get('siteName'),
 themeDir = '../' + themeName,
 plumberErrorHandler = { errorHandler: notify.onError({

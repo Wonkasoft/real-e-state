@@ -38,6 +38,21 @@ html, body {
 	padding-bottom: 300px;
 }
 
+a.logo-link {
+	background: $header-color;
+	position: relative;
+	z-index: 5;
+	display: block;
+	padding: 15px;
+	img {
+		width: 85%;
+	}
+}
+
+#section-1 {
+	background: #000;
+}
+
 #e-state-footer {
 	position: absolute;
 	display: block;
