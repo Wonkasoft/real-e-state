@@ -14,10 +14,10 @@
 
 get_header(); ?>
 <main id="main" class="container-fluid">
-	<div class="row">
+	<section id="" class="row">
 
 
-	</div><!-- .row -->
+	</section><!-- .row -->
 </main><!-- #main -->
 <?php
 get_footer();
