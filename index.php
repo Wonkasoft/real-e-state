@@ -14,9 +14,14 @@
 
 get_header(); ?>
 <main id="main" class="container-fluid">
+<<<<<<< HEAD
 	<section id="" class="row">
 
 
+=======
+	<section id="section-1" class="row">
+		
+>>>>>>> 9cf89f70cbe35fe30e7bcb756b0a661e227fcc83
 	</section><!-- .row -->
 </main><!-- #main -->
 <?php
