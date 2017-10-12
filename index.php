@@ -10,14 +10,16 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package real-e-state
+ * @version  1.0.0 [<description>]
+ * @since  1.0.0 [<description>]
+ * 
  */
 
 get_header(); ?>
 <main id="main" class="container-fluid">
-	<div class="row">
-
-
-	</div><!-- .row -->
+	<section id="section-1" class="row">
+		
+	</section><!-- .row -->
 </main><!-- #main -->
 <?php
 get_footer();
