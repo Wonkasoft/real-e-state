@@ -40,34 +40,34 @@ function real_e_state_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in five locations.
-	// This is the Primary Main Title Menu and used in the header.php file
+	// This is the Primary Main Title Menu and used in the template-parts/navigation/navigation-top.php file
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', 'real-e-state' ),
+		'top-left' => esc_html__( 'Top Left Menu', 'real-e-state' ),
 	) );
 
 	// This is the Sub Menu and used in the header.php file
 	register_nav_menus( array(
-		'menu-2' => esc_html__( 'SubMenu', 'real-e-state' ),
+		'top-right' => esc_html__( 'Top Right Menu', 'real-e-state' ),
 	) );
 
 	// This menu is on the footer for the explore menu and used in the footer.php file
 	register_nav_menus( array(
-		'menu-3' => esc_html__( 'Explore', 'real-e-state' ),
+		'footer-1' => esc_html__( 'Buyers', 'real-e-state' ),
 	) );
 
 	// This menu is on the footer for the about menu and used in the footer.php file
 	register_nav_menus( array(
-		'menu-4' => esc_html__( 'About', 'real-e-state' ),
+		'footer-2' => esc_html__( 'Sellers', 'real-e-state' ),
 	) );
 
 	// This menu is on the footer for the contact menu and used in the footer.php file
 	register_nav_menus( array(
-		'menu-5' => esc_html__( 'Contact', 'real-e-state' ),
+		'footer-3' => esc_html__( 'Resources', 'real-e-state' ),
 	) );
 
 	// This menu is on the footer for the connect menu and used in the footer.php file
 	register_nav_menus( array(
-		'menu-6' => esc_html__( 'Connect', 'real-e-state' ),
+		'sidebar-1' => esc_html__( 'Sidebar', 'real-e-state' ),
 	) );
 
 	/*
@@ -81,12 +81,6 @@ function real_e_state_setup() {
 		'gallery',
 		'caption',
 	) );
-
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'real_e_state_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
@@ -102,7 +96,15 @@ function real_e_state_setup() {
 		'flex-width'  => true,
 		'flex-height' => true,
 	) );
+
+/**
+* Customizer additions.
+*/
+require get_parent_theme_file_path( '/inc/customizer.php' );
+
 }
+
+
 endif;
 add_action( 'after_setup_theme', 'real_e_state_setup' );
 

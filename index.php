@@ -14,11 +14,12 @@
  * @since  1.0.0 [<description>]
  * 
  */
-
+$headertoimage = get_theme_mod( 'featured_header_image' );
 get_header(); ?>
 <main id="main" class="container-fluid">
-	<section id="section-1" class="row">
-		
+	<section id="above-fold" class="row">
+		<?php echo wp_get_attachment_url( $headertoimage ); ?>
+		<img src"<?php echo wp_get_attachment_url( $headertoimage ); ?>" alt="test" />
 	</section><!-- .row -->
 </main><!-- #main -->
 <?php

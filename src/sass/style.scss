@@ -9,7 +9,8 @@
  * @Media ( min-width: $xlarge )
  */
 /* End Media Queries */
-@import '_above-fold.scss';
+@import 'above-fold.scss';
+@import 'top-navigation.scss';
 
 /* FOOTER AREA */
 #e-state-footer {
