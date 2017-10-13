@@ -5,9 +5,11 @@
 
 #top-left-menu, #top-right-menu {
 	position: relative;
-	top: 25px;
+	top: 45px;
+	z-index: 1;
 	#top-left-nav, #top-right-nav {
 		list-style-type: none;
+		font-size: 14px;
 		li {
 			display: inline-block;
 			padding: 15px;

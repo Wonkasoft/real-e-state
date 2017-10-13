@@ -10,6 +10,7 @@
  */
 /* End Media Queries */
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import 'top-navigation.scss';
 
 /* THEME COLORS */
 $header-color: #3C6595;
@@ -26,10 +27,25 @@ html, body {
 }
 
 #masthead {
-	position: relative;
+	position: absolute;
+	font-weight: 700;
 	display: block;
-	height: 125px;
+	height: 120px;
 }
+
+#above-fold {
+	position: relative;
+	z-index: -50;
+	#header-image-wrap {
+			height: 600px;
+			width: 100%;
+			overflow: hidden;
+		img {
+			width: 100%;
+		}
+	}
+}
+
 
 #main {
 	position: relative;

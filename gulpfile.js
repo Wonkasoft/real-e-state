@@ -91,7 +91,7 @@ gulp.task('js', function () {
 		 
 		.pipe(gulp.dest('./assets/js'))
 
-		.pipe(browserSync.stream())
+		.pipe(browserSync.stream({match: '**/*.js'}))
 
               .pipe(notify({
                 message: "✔︎ JS task complete",

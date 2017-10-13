@@ -7,7 +7,7 @@
  */
 ?>
 <div class="col-xs-12">
-	<div class="col-xs-5 text-center">
+	<div class="col-xs-5 text-right">
 		<div id="top-left-menu">
 		<?php
 			wp_nav_menu( array ( 
@@ -20,7 +20,7 @@
 		?>
 		</div> <!-- /top-left-menu -->
 	</div><!-- col-xs-5 -->
-	<div class="col-xs-2">
+	<div class="col-xs-2 text-center">
 		<?php 
 	          if (!has_custom_logo()) {
 	            ?><a class="logo-link" href="<?php echo esc_url(home_url('/')); ?>">
@@ -35,7 +35,7 @@
 	          }
        		?>
 	</div><!-- /col-xs-2 -->
-	<div class="col-xs-5 text-center">
+	<div class="col-xs-5">
 		<div id="top-right-menu">
 		<?php
 			wp_nav_menu( array ( 

@@ -33,7 +33,7 @@ function real_e_state_customize_register( $wp_customize ) {
 	) );
 
 	// Main Header Image Control
-	$wp_customize->add_control( new WP_Customize_Media_Control( 
+	$wp_customize->add_control( new WP_Customize_Image_Control( 
 		$wp_customize, 
 		'featured_header_image', 
 		array(
