@@ -21,12 +21,33 @@ get_header(); ?>
 	<section id="above-fold" class="row">
 		<div id="header-image-wrap">
 			<img src="<?php echo $header_image; ?>" class="header-img" alt="Header Image" />
+			<div class="col-xs-12 header-message"><h2><?php echo get_theme_mod( 'header_message' ); ?></h2>
+			</div><!-- /col-xs-12 -->
 		</div> <!-- /header-image-wrap -->
 	</section> <!-- .row -->
-
 	<section id="first-section" class="row">
 		<div class="col-xs-12 text-center">
 			<h2><?php echo get_theme_mod( 'first_section_title' ); ?></h2>
+			<div class="col-xs-6 col-xs-offset-3 first-section-message"><p><?php echo get_theme_mod( 'first_section_message' ); ?></p>
+				<ul id="social-icons">
+					<li><?php if ( get_theme_mod( 'first_section_twitter' ) ) { 
+						?>
+						<a href="<?php echo get_theme_mod( 'first_section_twitter' ); ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a>  
+						<?php } ?></li>
+					<li><?php if ( get_theme_mod( 'first_section_facebook' ) ) { 
+						?>
+						<a href="<?php echo get_theme_mod( 'first_section_facebook' ); ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>  
+						<?php } ?></li>
+					<li><?php if ( get_theme_mod( 'first_section_instagram' ) ) { 
+						?>
+						<a href="<?php echo get_theme_mod( 'first_section_instagram' ); ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>  
+						<?php } ?></li>
+					<li><?php if ( get_theme_mod( 'first_section_yelp' ) ) { 
+						?>
+						<a href="<?php echo get_theme_mod( 'first_section_yelp' ); ?>"><i class="fa fa-yelp" aria-hidden="true"></i></a>  
+						<?php } ?></li>
+				</ul>
+			</div><!-- /first-section-message -->
 		</div> <!-- /col-xs-12 text-center -->
 	</section> <!-- .row -->
 
