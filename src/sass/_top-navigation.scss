@@ -1,0 +1,26 @@
+// This file is for the top navigation menu
+// @package real_e_state
+// @version 1.0.0
+// @since 1.0.0
+
+#top-left-menu, #top-right-menu {
+	position: relative;
+	top: 45px;
+	z-index: 1;
+	#top-left-nav, #top-right-nav {
+		list-style-type: none;
+		font-size: 14px;
+		li {
+			display: inline-block;
+			padding: 15px;
+			a {
+				text-decoration: none;
+				color: #fff;
+				&:hover {
+					text-decoration: none;
+					color: #fff;
+				}
+			}
+		}
+	}
+}

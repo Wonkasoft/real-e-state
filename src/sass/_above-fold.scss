@@ -1,7 +1,6 @@
 /**
  *  This is for all css that will affect the elements that are above the fold.
  */
-
 /* Media Queries */
 /**
  * @Media ( min-width: $small )
@@ -10,27 +9,50 @@
  * @Media ( min-width: $xlarge )
  */
 /* End Media Queries */
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import 'top-navigation.scss';
 
 /* THEME COLORS */
 $header-color: #3C6595;
 $header-dark: #143B6A;
 $footer-color: #8cc07d;
 
+/* THEME FONTS */
+$theme-font: Roboto, sans-serif;
+
 /* page setup */
 html, body {
+	margin: 0;
+	padding: 0;
+} 
+
+body {
+	font-family: $theme-font;
 	width: 100%;
 	height: 100%;
 	position: relative;
 }
 
 #masthead {
-	position: relative;
+	position: absolute;
+	font-weight: 700;
 	display: block;
-	height: 125px;
-	background: $header-color;
-	background: -webkit-linear-gradient(-245deg, $header-color 0%, $header-color 100%);
-	background: linear-gradient(-245deg, $header-color 0%, $header-color 100%);
+	height: 120px;
 }
+
+#above-fold {
+	position: relative;
+	z-index: -50;
+	#header-image-wrap {
+			height: 600px;
+			width: 100%;
+			overflow: hidden;
+		img {
+			width: 100%;
+		}
+	}
+}
+
 
 #main {
 	position: relative;
@@ -39,7 +61,6 @@ html, body {
 }
 
 a.logo-link {
-	background: $header-color;
 	position: relative;
 	z-index: 5;
 	display: block;
@@ -49,8 +70,8 @@ a.logo-link {
 	}
 }
 
-#section-1 {
-	background: #000;
+#above-fold {
+
 }
 
 #e-state-footer {
@@ -58,6 +79,7 @@ a.logo-link {
 	display: block;
 	width: 100%;
 	bottom: 0;
+	clear: both;
 	height: 300px;
 }
 /* end page setup */

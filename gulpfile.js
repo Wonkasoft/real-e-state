@@ -1,5 +1,3 @@
-"use strict";
-
 var gulp = require('gulp'),
 sass = require('gulp-sass'),
 jshint = require('gulp-jshint'),
@@ -46,8 +44,9 @@ gulp.task('init', function() {
 // Static server
 gulp.task('browser-sync', function() {
     browserSync.init({
-        proxy: 'localhost/' + siteName,
-        port: 80
+        port: 80,
+        proxy: 'http://localhost/'+siteName
+        
     });
 });
 
@@ -91,7 +90,7 @@ gulp.task('js', function () {
 		 
 		.pipe(gulp.dest('./assets/js'))
 
-		.pipe(browserSync.stream())
+		.pipe(browserSync.stream({match: '**/*.js'}))
 
               .pipe(notify({
                 message: "✔︎ JS task complete",
