@@ -24,18 +24,6 @@ get_header(); ?>
 			<div class="col-xs-12 header-message"><h2><?php echo get_theme_mod( 'header_message' ); ?></h2>
 			</div><!-- /col-xs-12 -->
 		</div> <!-- /header-image-wrap -->
-		<div id="header-message-wrap">
-			<?php echo get_theme_mod( 'header_message' ); ?>
-		</div>
-
-		<div id="header-cta">
-			<?php 
-			$header_cta_text = get_theme_mod( 'header_cta_text' );
-			$header_cta_link = the_permalink( get_theme_mod( 'header_cta_link' ) );
-			var_dump(the_permalink( get_theme_mod( 'header_cta_link' ) ));
-			?>
-			<a href="<?php echo $header_cta_link ?>" class="btn btn-lg"><?php echo $header_cta_text; ?></a>
-		</div>
 	</section> <!-- .row -->
 	<section id="first-section" class="row">
 		<div class="col-xs-12 text-center">
