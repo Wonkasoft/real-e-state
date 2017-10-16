@@ -13,7 +13,7 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function real_e_state_customize_register( $wp_customize ) {
-	
+
 	/**
 	 * 
 	 * Main Header Section
@@ -22,7 +22,7 @@ function real_e_state_customize_register( $wp_customize ) {
 	 */
 	// Adding customizer section for main header section
 	$wp_customize->add_section( 'main_header_section' , array(
-		'title'				=> __( 'Main Header Section', 'real-e-state' ),
+		'title'		=> __( 'Main Header Section', 'real-e-state' ),
 		'priority'		=> 29,
 	) );
 
