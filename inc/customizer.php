@@ -13,7 +13,7 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function real_e_state_customize_register( $wp_customize ) {
-
+	
 	/**
 	 * 
 	 * Main Header Section

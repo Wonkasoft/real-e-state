@@ -14,12 +14,13 @@
  * @since  1.0.0 [<description>]
  * 
  */
+
 $header_image = (!get_theme_mod( 'featured_header_image' ) ) ? get_template_directory_uri() . '/assets/images/house-image.jpg': get_theme_mod( 'featured_header_image' );
 get_header(); ?>
 <main id="main" class="container-fluid">
 	<section id="above-fold" class="row">
 		<div id="header-image-wrap">
-			<img src="<?php echo $header_image; ?>" class="" alt="Header Image" />
+			<img src="<?php echo $header_image; ?>" class="header-img" alt="Header Image" />
 		</div> <!-- /header-image-wrap -->
 	</section> <!-- .row -->
 
@@ -65,7 +66,7 @@ get_header(); ?>
 			<h2><?php echo get_theme_mod( 'testimonial_section_title' ); ?></h2>
 		</div> <!-- /col-xs-12 text-center -->
 	</section> <!-- .row -->
-
 </main> <!-- #main -->
+
 <?php
 get_footer();

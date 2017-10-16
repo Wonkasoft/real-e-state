@@ -22,18 +22,11 @@
 	</div><!-- col-xs-5 -->
 	<div class="col-xs-2 text-center">
 		<?php 
-	          if (!has_custom_logo()) {
-	            ?><a class="logo-link" href="<?php echo esc_url(home_url('/')); ?>">
-	            <img class="img-responsive center-block default-logo" src="<?php echo get_template_directory_uri() . '/assets/images/real-e-state-logo.png'; ?>" /></a>
-	            <?php 
-	          } else { 
-	              $custom_logo_id = get_theme_mod( 'custom_logo' );
-	            ?>
-	              <a class="logo-link text-center" href="<?php echo esc_url(home_url('/')); ?>">
-	            	<img class="img-responsive center-block custom-logo" src="<?php echo wp_get_attachment_url( $custom_logo_id ); ?>" /></a>
-	            <?php
-	          }
-       		?>
+		$custom_Logo = ( !has_custom_logo() ) ? get_template_directory_uri() . '/assets/images/real-e-state-logo.png': wp_get_attachment_url( get_theme_mod( 'custom_logo' ) );
+		$logo_class = ( !has_custom_logo() ) ? 'default-logo': 'custom-logo';
+            	?>
+            	<a class="logo-link text-center" href="<?php echo esc_url(home_url('/')); ?>">
+	            <img class="img-responsive center-block <?php echo $logo_class; ?>" src="<?php echo $custom_Logo; ?>" /></a>         
 	</div><!-- /col-xs-2 -->
 	<div class="col-xs-5">
 		<div id="top-right-menu">
