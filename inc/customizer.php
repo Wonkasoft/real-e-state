@@ -13,9 +13,7 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function real_e_state_customize_register( $wp_customize ) {
-
-$allowed_urls = [];
-$allowed_urls = apply_filters('customize_allowed_urls', $allowed_urls );
+	
 	/**
 	 * 
 	 * Main Header Section
@@ -696,11 +694,3 @@ function real_e_state_customize_preview_js() {
 	wp_enqueue_script( 'real-e-state-customizer', get_template_directory_uri() . 'assets/js/customizer.js', array( 'customize-preview' ), '20171012', true );
 }
 add_action( 'customize_preview_init', 'real_e_state_customize_preview_js' );
-
-
-function dev_header_fix( $allowed_urls ) {
-
-	var_dump( $allowed_urls );
-	return $allowed_urls;
-}
-add_filter( 'customize_allowed_urls', 'dev_header_fix' , 10, 1 );

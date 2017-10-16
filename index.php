@@ -65,7 +65,6 @@ get_header(); ?>
 			<h2><?php echo get_theme_mod( 'testimonial_section_title' ); ?></h2>
 		</div> <!-- /col-xs-12 text-center -->
 	</section> <!-- .row -->
-
 </main> <!-- #main -->
 
 <?php

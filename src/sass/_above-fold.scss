@@ -10,7 +10,6 @@
  */
 /* End Media Queries */
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
-@import 'top-navigation.scss';
 
 /* THEME COLORS */
 $header-color: #3C6595;
@@ -19,6 +18,9 @@ $footer-color: #8cc07d;
 
 /* THEME FONTS */
 $theme-font: Roboto, sans-serif;
+
+/* Top Nav import */
+@import 'top-navigation.scss';
 
 /* page setup */
 html, body {
