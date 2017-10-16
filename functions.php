@@ -122,6 +122,8 @@ function real_e_state_scripts() {
 
 	wp_enqueue_style( 'real-e-state-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
+
 	// Check to see if bootstrap js is already enqueue before setting the enqueue
 	$bootstrapjs = 'bootstrap-js';
 	if ( ! wp_script_is( $bootstrapjs, 'enqueued')  &&  ! wp_script_is($bootstrapjs, 'done') ) {
