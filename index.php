@@ -90,7 +90,7 @@ get_header(); ?>
 			<?php
 			echo get_theme_mod( 'financing_section_message' );
 			?>
-		</div>
+		</div> <!-- /col-xs-12 text-center -->
 	</section> <!-- .row -->
 
 	<section id="information-section-1" class="row">
