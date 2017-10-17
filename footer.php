@@ -55,11 +55,11 @@
 			</div><!-- /col-xs-12 -->
 		</div><!-- .row -->
 		<div class="row">
-			<div class="col-xs-3">
-				<span class="powered">Powered by</span> <a href="https://wonkasoft.com" target="_blank">Wonkasoft</a> <br />
+			<div class="col-xs-4 powered">
+				<span>Powered by</span> <a href="https://wonkasoft.com" target="_blank"><img class="img-responsive wonkasoft-logo" src="<?php echo get_template_directory_uri() . '/assets/images/wonkacircle@34.png'; ?>" alt="Wonkasoft Logo" /></a>
 				<span>© <?php echo date('Y');?> All Rights Reserved - Privacy Policy</span>
 			</div><!-- .col-xs-3 -->
-			<div class="col-xs-9 text-center">
+			<div class="col-xs-8 text-center">
 				<span></span>
 			</div><!-- .col-xs-9 -->
 		</div><!-- .row -->

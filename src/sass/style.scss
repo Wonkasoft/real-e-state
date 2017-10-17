@@ -59,6 +59,12 @@
 	> .row {
 		padding: 15px;
 		height: 85px;
+		.powered > span {
+			display: block;
+			&:first-child {
+				display: inline-block;
+			}
+		}
 		&:first-child {
 			height: 215px;
 		}
