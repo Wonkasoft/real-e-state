@@ -32,11 +32,11 @@ get_header(); ?>
 				<ul id="social-icons">
 					<li><?php if ( get_theme_mod( 'first_section_twitter' ) ) { 
 						?>
-						<a href="<?php echo get_theme_mod( 'first_section_twitter' ); ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a>  
+						<a href="<?php echo get_theme_mod( 'first_section_twitter' ); ?>"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>  
 						<?php } ?></li>
 					<li><?php if ( get_theme_mod( 'first_section_facebook' ) ) { 
 						?>
-						<a href="<?php echo get_theme_mod( 'first_section_facebook' ); ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>  
+						<a href="<?php echo get_theme_mod( 'first_section_facebook' ); ?>"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>  
 						<?php } ?></li>
 					<li><?php if ( get_theme_mod( 'first_section_instagram' ) ) { 
 						?>

@@ -1,18 +1,33 @@
 <?php
 
 ?>
-	<footer id="e-state-footer" class="container-fluid">
+	<footer id="e-state-footer" class="container">
 		<div class="row">
-
+			<div class="col-xs-12">
+				<div class="col-xs-12 col-md-3">
+					Test
+				</div><!-- /col-xs-12 -->
+				<div class="col-xs-12 col-md-3">
+					Test
+				</div><!-- /col-xs-12 -->
+				<div class="col-xs-12 col-md-3">
+					Test
+				</div><!-- /col-xs-12 -->
+				<div class="col-xs-12 col-md-3">
+					Test
+				</div><!-- /col-xs-12 -->
+			</div><!-- /col-xs-12 -->
 		</div><!-- .row -->
 		<div class="row">
-			<div class="col-xs-12 text-center">
-				<?php
-							/* translators: 1: Theme name, 2: Theme author. */
-							printf( esc_html__( 'Site Created for %1$s by %2$s', 'real-e-state' ), 'Real e-state', '<a href="https://wonkasoft.com/" target="_blank">Wonkasoft</a>  |  ' );
-						?>
-				<span class="powered">Powered by</span><a href="https://wordpress.org" target="_blank"><img class="img-responsive wordpress-logo" src="https://s.w.org/about/images/logos/wordpress-logo-32.png" alt="WP Logo" /></a>
-			</div><!-- .col-xs-12 -->
+			<div class="col-xs-3 text-center">
+				<span class="powered">Powered by</span><a href="https://wordpress.org" target="_blank"><img class="img-responsive wonkasoft-logo" src="<?php echo get_template_directory_uri() . '/assets/images/wonkacircle@34.png'; ?>" alt="Wonkasoft Logo" /></a>
+			</div><!-- .col-xs-3 -->
+			<div class="col-xs-9 text-center">
+				<span class="reserved-rights">©2017 All Rights Reserved - Privacy Policy</span>
+			</div><!-- .col-xs-3 -->
+			<div class="col-xs-3 text-center">
+				<span class="">©2017 All Rights Reserved - Privacy Policy</span>
+			</div><!-- .col-xs-6 -->
 		</div><!-- .row -->
 	</footer>
 </div><!-- End page-wrap -->
