@@ -28,7 +28,10 @@ get_header(); ?>
 	<section id="first-section" class="row">
 		<div class="col-xs-12 text-center">
 			<h2><?php echo get_theme_mod( 'first_section_title' ); ?></h2>
-			<div class="col-xs-6 col-xs-offset-3 first-section-message"><p><?php echo get_theme_mod( 'first_section_message' ); ?></p>
+			<div class="col-xs-6 col-xs-offset-3 first-section-message">
+				<p>
+					<?php echo get_theme_mod( 'first_section_message' ); ?>		
+				</p>
 				<ul id="social-icons">
 					<li><?php if ( get_theme_mod( 'first_section_twitter' ) ) { 
 						?>
@@ -61,12 +64,33 @@ get_header(); ?>
 		<div class="col-xs-12 text-center">
 			<h2><?php echo get_theme_mod( 'client_brand_section_title' ); ?></h2>
 		</div> <!-- /col-xs-12 text-center -->
+
+		<div class="col-xs-12 col-md-3 text-center">
+			<img class="img-responsive" src="<?php echo get_theme_mod( 'client_brand_section_logo_1' ); ?>" alt="client image 1">
+		</div> <!-- /col-xs-12 col-md-3 text-center -->
+
+		<div class="col-xs-12 col-md-3 text-center">
+			<img class="img-responsive" src="<?php echo get_theme_mod( 'client_brand_section_logo_2' ); ?>" alt="client image 2">
+		</div> <!-- /col-xs-12 col-md-3 text-center -->
+
+		<div class="col-xs-12 col-md-3 text-center">
+			<img class="img-responsive" src="<?php echo get_theme_mod( 'client_brand_section_logo_3' ); ?>" alt="client image 3">
+		</div> <!-- /col-xs-12 col-md-3 text-center -->
+
+		<div class="col-xs-12 col-md-3 text-center">
+			<img class="img-responsive" src="<?php echo get_theme_mod( 'client_brand_section_logo_4' ); ?>" alt="client image 4">
+		</div> <!-- /col-xs-12 col-md-3 text-center -->
 	</section> <!-- .row -->
 
 	<section id="financing-section" class="row">
 		<div class="col-xs-12 text-center">
 			<h2><?php echo get_theme_mod( 'financing_section_title' ); ?></h2>
 		</div> <!-- /col-xs-12 text-center -->
+		<div class="col-xs-12 text-center">
+			<?php
+			echo get_theme_mod( 'financing_section_message' );
+			?>
+		</div>
 	</section> <!-- .row -->
 
 	<section id="information-section-1" class="row">
