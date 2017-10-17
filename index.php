@@ -15,7 +15,7 @@
  * 
  */
 
-$header_image = (!get_theme_mod( 'featured_header_image' ) ) ? get_template_directory_uri() . '/assets/images/house-image.jpg': get_theme_mod( 'featured_header_image' );
+$header_image = ( !get_theme_mod( 'featured_header_image' ) ) ? get_template_directory_uri() . '/assets/images/house-image.jpg': get_theme_mod( 'featured_header_image' );
 get_header(); ?>
 <main id="main" class="container-fluid">
 	<section id="above-fold" class="row">
