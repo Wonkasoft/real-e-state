@@ -26,7 +26,7 @@ get_header(); ?>
 				$header_cta_link = get_permalink( get_theme_mod( 'header_cta_link' ) );
 				$header_cta_text = get_theme_mod( 'header_cta_text' );
 				?>
-				<a href="<?php echo $header_cta_link; ?>" class="btn btn-lg"><?php echo $header_cta_text; ?></a>
+				<a href="<?php echo $header_cta_link; ?>" class="btn btn-lg btn-default"><?php echo $header_cta_text; ?></a>
 			</div><!-- /col-xs-12 -->
 		</div> <!-- /header-image-wrap -->
 	</section> <!-- .row -->
@@ -104,22 +104,36 @@ get_header(); ?>
 			?>
 		</div> <!-- /col-xs-12 text-center -->
 		<div class="col-xs-12 text-center">
-			<a href="<?php echo get_theme_mod( 'financing_section_cta_link' ); ?>">
+			<a href="<?php echo get_theme_mod( 'financing_section_cta_link' ); ?>" class="btn btn-lg btn-default">
 				<?php echo get_theme_mod( 'financing_section_cta_text' ); ?></a>
 		</div> <!-- /col-xs-12 text-center -->
 	</section> <!-- .row -->
 
 	<section id="information-section-1" class="row">
 		<div class="col-xs-12 text-center">
-			<h2><?php echo get_theme_mod( 'information_section_1_title' ); ?></h2>
+			<h2><?php echo get_theme_mod( 'information_section_title_1' ); ?></h2>
+		</div> <!-- /col-xs-12 text-center -->
+		<div class="col-xs-12 text-center">
+			<?php echo get_theme_mod( 'information_section_message_1' ); ?>
+		</div> <!-- /col-xs-12 text-center -->
+		<div class="col-xs-12 text-center">
+			<a href="<?php echo get_theme_mod( 'information_section_cta_link_1' ); ?>" class="btn btn-lg btn-default"><?php echo get_theme_mod( 'information_section_cta_text_1' ); ?></a>
 		</div> <!-- /col-xs-12 text-center -->
 	</section> <!-- .row -->
 
 	<section id="information-section-2" class="row">
 		<div class="col-xs-12 text-center">
-			<h2><?php echo get_theme_mod( 'information_section_2_title' ); ?></h2>
+			<h2><?php echo get_theme_mod( 'information_section_title_2' ); ?></h2>
+		</div> <!-- /col-xs-12 text-center -->
+		<div class="col-xs-12 text-center">
+			<?php echo get_theme_mod( 'information_section_message_2' ); ?>
+		</div> <!-- /col-xs-12 text-center -->
+		<div class="col-xs-12 text-center">
+			<a href="<?php echo get_theme_mod( 'information_section_cta_link_1' ); ?>" class="btn btn-lg btn-default"><?php echo get_theme_mod( 'information_section_cta_text_2' ); ?></a>
 		</div> <!-- /col-xs-12 text-center -->
 	</section> <!-- .row -->
+
+	
 
 	<section id="about-section" class="row">
 		<div class="col-xs-12 text-center">
