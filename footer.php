@@ -4,7 +4,7 @@
 	<footer id="e-state-footer" class="container">
 		<div class="row">
 			<div class="col-xs-12">
-				<div class="col-xs-12 col-md-3">
+				<div class="col-xs-12 col-sm-3">
 					<h4 class="footer-headers">Buyers</h4>
 					<div id="footer-1-wrap">
 					<?php
@@ -19,7 +19,7 @@
 					?>
 					</div> <!-- /footer-1-menu -->
 				</div><!-- /col-xs-12 -->
-				<div class="col-xs-12 col-md-3">
+				<div class="col-xs-12 col-sm-3">
 					<h4 class="footer-headers">Sellers</h4>
 					<div id="footer-2-wrap">
 					<?php
@@ -34,7 +34,7 @@
 					?>
 					</div> <!-- /footer-2-menu -->
 				</div><!-- /col-xs-12 -->
-				<div class="col-xs-12 col-md-3">
+				<div class="col-xs-12 col-sm-3">
 					<h4 class="footer-headers">Resources</h4>
 					<div id="footer-3-wrap">
 					<?php
@@ -49,7 +49,7 @@
 					?>
 					</div> <!-- /footer-3-menu -->
 				</div><!-- /col-xs-12 -->
-				<div class="col-xs-12 col-md-3">
+				<div class="col-xs-12 col-sm-3">
 					<h4 class="footer-headers">Join Our Mailing List</h4>
 					<div id="footer-4">
 						<form>
@@ -72,11 +72,11 @@
 			</div><!-- /col-xs-12 -->
 		</div><!-- .row -->
 		<div class="row">
-			<div class="col-xs-4 col-xs-offset-1 powered">
-				<span>Powered by <a href="https://wonkasoft.com" target="_blank"><img class="img-responsive wonkasoft-logo" src="<?php echo get_template_directory_uri() . '/assets/images/wonkacircle@34.png'; ?>" alt="Wonkasoft Logo" /></a></span>
+			<div class="col-xs-5 col-md-offset-1 powered">
+				<span>Powered by <a href="https://wonkasoft.com" target="_blank">Wonkasoft <img class="img-responsive wonkasoft-logo" src="<?php echo get_template_directory_uri() . '/assets/images/wonkacircle@34.png'; ?>" alt="Wonkasoft Logo" /></a></span>
 				<span>© <?php echo date('Y');?> All Rights Reserved - Privacy Policy</span>
 			</div><!-- .col-xs-3 -->
-			<div class="col-xs-7 text-center">
+			<div class="col-xs-6 text-center">
 				<span></span>
 			</div><!-- .col-xs-9 -->
 		</div><!-- .row -->
