@@ -23,6 +23,9 @@ $theme-font: Roboto, sans-serif;
 /* Top Nav import */
 @import 'top-navigation.scss';
 
+/* FOOTER HEIGHT */
+$footer-height: 315px;
+
 /* page setup */
 html, body {
 margin: 0;
@@ -62,7 +65,7 @@ position: relative;
 #main {
 	position: relative;
 	display: block;
-	padding-bottom: 300px;
+	padding-bottom: $footer-height + 15;
 }
 
 a.logo-link {
@@ -90,7 +93,7 @@ a.logo-link {
 	width: 100%;
 	bottom: 0;
 	clear: both;
-	height: 300px;
+	height: $footer-height;
 }
 /* end page setup */
 
