@@ -70,6 +70,17 @@ function real_e_state_setup() {
 		'sidebar-1' => esc_html__( 'Sidebar', 'real-e-state' ),
 	) );
 
+	if ( function_exists( 'register_sidebar' ) ) {
+  register_sidebar( array(
+    'name' 					=> 'Search Area Widget',
+    'before_widget' => '<div class = "search-area">',
+    'after_widget' 	=> '</div>',
+    'before_title' 	=> '<h3>',
+    'after_title' 	=> '</h3>',
+  ) );
+}
+
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.

@@ -266,7 +266,7 @@ $wp_customize->add_control( new WP_Customize_Control(
  */
 $wp_customize->add_section( 'testimonial_section' , array(
 	'title'				=> __( 'Testimonial Section', 'real-e-state' ),
-	'priority'		=> 34,
+	'priority'		=> 32,
 ) );
 
 	// Testimonial Section Title Setting
@@ -356,7 +356,7 @@ $wp_customize->add_control( new WP_Customize_Control(
  */
 $wp_customize->add_section( 'financing_section' , array(
 	'title'				=> __( 'Financing Section', 'real-e-state' ),
-	'priority'		=> 32,
+	'priority'		=> 33,
 ) );
 
 	// Financing Section Title Setting
