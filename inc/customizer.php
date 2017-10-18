@@ -260,73 +260,92 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 /**
  *
- * Add featured client brands section
- * @since  1.0.0 [<Add Featured Client brands section>]
+ * Add Testimonials section
+ * @since  1.0.0 [<Add Testimonials section>]
  * 
  */
-$wp_customize->add_section( 'client_brand_section' , array(
-	'title'				=> __( 'Client Brand Section', 'real-e-state' ),
-	'priority'		=> 31,
+$wp_customize->add_section( 'testimonial_section' , array(
+	'title'				=> __( 'Testimonial Section', 'real-e-state' ),
+	'priority'		=> 34,
 ) );
 
-	// Branding Section Title Setting
-$wp_customize->add_setting( 'client_brand_section_title' , array(
+	// Testimonial Section Title Setting
+$wp_customize->add_setting( 'testimonial_section_title' , array(
 	'default'   => '',
 	'transport' => 'refresh',
 ) );
 
-	// Branding Section Title Control
+	// Testimonial Section Title Control
 $wp_customize->add_control( new WP_Customize_Control( 
 	$wp_customize, 
-	'client_brand_section_title', 
+	'testimonial_section_title', 
 	array(
-		'label'      	=> __( 'Branding Section Title ', 'real-e-state' ),
-		'section'    	=> 'client_brand_section',
-		'setting'   	=> 'client_brand_section_title',
+		'label'      	=> __( 'Testimonial Section Title ', 'real-e-state' ),
+		'section'    	=> 'testimonial_section',
+		'setting'   	=> 'testimonial_section_title',
 		'type'				=> 'text',
-		'description'	=> 'Input the title for the client branding section',
+		'description'	=> 'Input the title for the testimonial section',
 	) ) );
 
-	// Branding Section Message Setting
-$wp_customize->add_setting( 'client_brand_section_message' , array(
+	// Testimonial Section Message Setting
+$wp_customize->add_setting( 'testimonial_section_message' , array(
 	'default'   => '',
 	'transport' => 'refresh',
 ) );
 
-	// Branding Section Message Control
+	// Testimonial Section Message Control
 $wp_customize->add_control( new WP_Customize_Control( 
 	$wp_customize, 
-	'client_brand_section_message', 
+	'testimonial_section_message', 
 	array(
-		'label'      	=> __( 'Branding Section Message ', 'real-e-state' ),
-		'section'    	=> 'client_brand_section',
-		'setting'   	=> 'client_brand_section_message',
+		'label'      	=> __( 'Testimonial Section Message ', 'real-e-state' ),
+		'section'    	=> 'testimonial_section',
+		'setting'   	=> 'testimonial_section_message',
 		'type'				=> 'textarea',
-		'description'	=> 'Input the title for the client branding section',
+		'description'	=> 'Input the message for the testimonial section',
 	) ) );
 
-for ($i=1; $i < 5; $i++) { 
+for ($i=1; $i < 4; $i++) { 
 
-// Branding Section Logo Setting
-$wp_customize->add_setting( 'client_brand_section_logo_'.$i , array(
+// Testimonial Section Image Setting
+$wp_customize->add_setting( 'testimonial_section_image_'.$i , array(
 	'default'   => '',
 	'transport' => 'refresh',
 ) );
 
-	// Branding Section Logo Control
+	// Testimonial Section Image Control
 $wp_customize->add_control( new WP_Customize_Image_Control( 
 	$wp_customize, 
-	'client_brand_section_logo_'.$i, 
+	'testimonial_section_image_'.$i, 
 	array(
-		'label'      	=> __( 'Client Logo '.$i, 'real-e-state' ),
-		'section'    	=> 'client_brand_section',
-		'setting'   	=> 'client_brand_section_logo_'.$i,
-		'description'	=> 'Add client Logo '.$i.' for the client branding section',
+		'label'      	=> __( 'Client Image '.$i, 'real-e-state' ),
+		'section'    	=> 'testimonial_section',
+		'setting'   	=> 'testimonial_section_image_'.$i,
+		'description'	=> 'Add profile image '.$i.' for the client testimonial section',
 	) ) );
+
+// Testimonial Section Client Message Setting
+$wp_customize->add_setting( 'testimonial_section_client_message_'.$i , array(
+	'default'   => '',
+	'transport' => 'refresh',
+) );
+
+	// Testimonial Section Client Message Control
+$wp_customize->add_control( new WP_Customize_Control( 
+	$wp_customize, 
+	'testimonial_section_client_message_'.$i, 
+	array(
+		'label'      	=> __( 'Client Message '.$i, 'real-e-state' ),
+		'section'    	=> 'testimonial_section',
+		'setting'   	=> 'testimonial_section_client_message_'.$i,
+		'type'				=> 'text',
+		'description'	=> 'Add client '.$i.' message',
+	) ) );
+
 }
 
 /**
- * End of featured client brands section
+ * End of Testimonials section
  */
 
 /**
@@ -507,97 +526,6 @@ for ( $i=1; $i < 3 ; $i++ ) {
 /**
  * End of Information Section
  */
-
-/**
- *
- * Add Testimonials section
- * @since  1.0.0 [<Add Testimonials section>]
- * 
- */
-$wp_customize->add_section( 'testimonial_section' , array(
-	'title'				=> __( 'Testimonial Section', 'real-e-state' ),
-	'priority'		=> 34,
-) );
-
-	// Testimonial Section Title Setting
-$wp_customize->add_setting( 'testimonial_section_title' , array(
-	'default'   => '',
-	'transport' => 'refresh',
-) );
-
-	// Testimonial Section Title Control
-$wp_customize->add_control( new WP_Customize_Control( 
-	$wp_customize, 
-	'testimonial_section_title', 
-	array(
-		'label'      	=> __( 'Testimonial Section Title ', 'real-e-state' ),
-		'section'    	=> 'testimonial_section',
-		'setting'   	=> 'testimonial_section_title',
-		'type'				=> 'text',
-		'description'	=> 'Input the title for the testimonial section',
-	) ) );
-
-	// Testimonial Section Message Setting
-$wp_customize->add_setting( 'testimonial_section_message' , array(
-	'default'   => '',
-	'transport' => 'refresh',
-) );
-
-	// Testimonial Section Message Control
-$wp_customize->add_control( new WP_Customize_Control( 
-	$wp_customize, 
-	'testimonial_section_message', 
-	array(
-		'label'      	=> __( 'Testimonial Section Message ', 'real-e-state' ),
-		'section'    	=> 'testimonial_section',
-		'setting'   	=> 'testimonial_section_message',
-		'type'				=> 'textarea',
-		'description'	=> 'Input the message for the testimonial section',
-	) ) );
-
-for ($i=1; $i < 4; $i++) { 
-
-// Testimonial Section Image Setting
-$wp_customize->add_setting( 'testimonial_section_image_'.$i , array(
-	'default'   => '',
-	'transport' => 'refresh',
-) );
-
-	// Testimonial Section Image Control
-$wp_customize->add_control( new WP_Customize_Image_Control( 
-	$wp_customize, 
-	'testimonial_section_image_'.$i, 
-	array(
-		'label'      	=> __( 'Client Image '.$i, 'real-e-state' ),
-		'section'    	=> 'testimonial_section',
-		'setting'   	=> 'testimonial_section_image_'.$i,
-		'description'	=> 'Add profile image '.$i.' for the client testimonial section',
-	) ) );
-
-// Testimonial Section Client Message Setting
-$wp_customize->add_setting( 'testimonial_section_client_message_'.$i , array(
-	'default'   => '',
-	'transport' => 'refresh',
-) );
-
-	// Testimonial Section Client Message Control
-$wp_customize->add_control( new WP_Customize_Control( 
-	$wp_customize, 
-	'testimonial_section_client_message_'.$i, 
-	array(
-		'label'      	=> __( 'Client Message '.$i, 'real-e-state' ),
-		'section'    	=> 'testimonial_section',
-		'setting'   	=> 'testimonial_section_client_message_'.$i,
-		'type'				=> 'text',
-		'description'	=> 'Add client '.$i.' message',
-	) ) );
-
-}
-
-/**
- * End of Testimonials section
- */
-
 
 /**
  *

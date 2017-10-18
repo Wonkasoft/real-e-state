@@ -61,26 +61,10 @@ get_header(); ?>
 		</div> <!-- /col-xs-12 text-center -->
 	</section> <!-- .row -->
 
-	<section id="client-brand-section" class="row">
+	<section id="testimonial-section" class="row">
 		<div class="col-xs-12 text-center">
-			<h2><?php echo get_theme_mod( 'client_brand_section_title' ); ?></h2>
+			<h2><?php echo get_theme_mod( 'testimonial_section_title' ); ?></h2>
 		</div> <!-- /col-xs-12 text-center -->
-
-		<div class="col-xs-12 col-md-3 text-center">
-			<img class="img-responsive" src="<?php echo get_theme_mod( 'client_brand_section_logo_1' ); ?>" alt="client image 1">
-		</div> <!-- /col-xs-12 col-md-3 text-center -->
-
-		<div class="col-xs-12 col-md-3 text-center">
-			<img class="img-responsive" src="<?php echo get_theme_mod( 'client_brand_section_logo_2' ); ?>" alt="client image 2">
-		</div> <!-- /col-xs-12 col-md-3 text-center -->
-
-		<div class="col-xs-12 col-md-3 text-center">
-			<img class="img-responsive" src="<?php echo get_theme_mod( 'client_brand_section_logo_3' ); ?>" alt="client image 3">
-		</div> <!-- /col-xs-12 col-md-3 text-center -->
-
-		<div class="col-xs-12 col-md-3 text-center">
-			<img class="img-responsive" src="<?php echo get_theme_mod( 'client_brand_section_logo_4' ); ?>" alt="client image 4">
-		</div> <!-- /col-xs-12 col-md-3 text-center -->
 	</section> <!-- .row -->
 
 	<section id="financing-section" class="row">
@@ -100,18 +84,18 @@ get_header(); ?>
 		</div> <!-- /col-xs-12 text-center -->
 	</section> <!-- .row -->
 
-		<section id="information-section-2" class="row">
+	<section id="information-section-2" class="row">
 		<div class="col-xs-12 text-center">
 			<h2><?php echo get_theme_mod( 'information_section_2_title' ); ?></h2>
 		</div> <!-- /col-xs-12 text-center -->
 	</section> <!-- .row -->
 
-
-	<section id="testimonial-section" class="row">
+	<section id="about-section" class="row">
 		<div class="col-xs-12 text-center">
-			<h2><?php echo get_theme_mod( 'testimonial_section_title' ); ?></h2>
+			<h2><?php echo get_theme_mod( 'about_section_title' ); ?></h2>
 		</div> <!-- /col-xs-12 text-center -->
-	</section> <!-- .row -->
+	</section> <!-- /about-section -->
+
 </main> <!-- #main -->
 
 <?php
