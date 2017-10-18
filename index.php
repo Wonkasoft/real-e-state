@@ -25,6 +25,7 @@ get_header(); ?>
 			</div><!-- /col-xs-12 -->
 		</div> <!-- /header-image-wrap -->
 	</section> <!-- .row -->
+	
 	<section id="first-section" class="row">
 		<div class="col-xs-12 text-center">
 			<h2><?php echo get_theme_mod( 'first_section_title' ); ?></h2>
