@@ -32,30 +32,6 @@
   }
 }
 
-/* MAIN CONTENT */
-#main {
-	section {
-		min-height: 400px;
-		padding: 1% 15%;
-		&:first-child {
-			padding: 0;
-			h2 {
-				font-size: 2em;
-			}
-		}
-		h2 {
-			font-size: 2.3em;
-			font-family: $header-font;
-		}
-		&:nth-child(odd) {
-			background: $header-color;
-			color: #fff;
-			h2 {
-				color: #fff;
-			}
-		}
-	}
-}
 /* FIRST SECTION */
 #social-icons {
 	list-style-type: none;
@@ -99,6 +75,12 @@
 		p {
 			width: 40%;
 			margin: auto;
+		}
+	}
+	.carousel-control {
+		.glyphicon {
+			top: 47%;
+			font-size: 4rem;
 		}
 	}
 }

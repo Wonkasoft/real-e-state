@@ -1,24 +1,14 @@
 <?php
 /**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
+ * This is the templete for the layout of front page
  * @package real-e-state
  * @version  1.0.0 
  * @since  1.0.0 
- * 
  */
-
 $header_image = ( !get_theme_mod( 'featured_header_image' ) ) ? get_template_directory_uri() . '/assets/images/house-image.jpg': get_theme_mod( 'featured_header_image' );
 get_header(); ?>
 <main id="main" class="container-fluid">
-	<section id="above-fold" class="row">
+<section id="above-fold" class="row">
 		<div id="header-image-wrap">
 			<img src="<?php echo $header_image; ?>" class="header-img" alt="Header Image" />
 			<div class="col-xs-4 header-message text-center"><h2><?php echo get_theme_mod( 'header_message' ); ?></h2>
@@ -74,34 +64,45 @@ get_header(); ?>
 	</section> <!-- .row -->
 	<?php if (get_theme_mod( 'testimonial_section_title' )) {
 	?>
-	<section id="testimonial-section" class="row">
+	<section id="testimonial-section" class="row carousel slide" data-ride="carousel">
 		<div class="col-xs-12 text-center">
 			<h2><?php echo get_theme_mod( 'testimonial_section_title' ); ?></h2>
 		</div> <!-- /col-xs-12 text-center -->
 		<div class="col-xs-12 text-center section-message">
 			<?php echo get_theme_mod( 'testimonial_section_message' ); ?>
 		</div> <!-- /col-xs-12 text-center -->
+		<div class="carousel-inner" role="listbox">
 		<?php if (get_theme_mod( 'testimonial_section_client_message_1' )) { ?>
-		<div class="col-xs-12 text-center testimonial-module">
+		<div class="col-xs-12 text-center testimonial-module item active">
 			<img src="<?php echo get_theme_mod( 'testimonial_section_image_1' ); ?>" class="img-responsive center-block">
 			<i class="fa fa-quote-left"></i>
 			<p><?php echo get_theme_mod( 'testimonial_section_client_message_1' ); ?></p>
 		</div> <!-- /col-xs-12 text-center testimonial-module -->
 		<?php } ?>
 		<?php if (get_theme_mod( 'testimonial_section_client_message_2' )) { ?>
-		<div class="col-xs-12 text-center testimonial-module">
+		<div class="col-xs-12 text-center testimonial-module item">
 			<img src="<?php echo get_theme_mod( 'testimonial_section_image_2' ); ?>" class="img-responsive center-block">
 			<i class="fa fa-quote-left"></i>
 			<p><?php echo get_theme_mod( 'testimonial_section_client_message_2' ); ?></p>
 		</div> <!-- /col-xs-12 text-center testimonial-module -->
 		<?php } ?>
 		<?php if (get_theme_mod( 'testimonial_section_client_message_3' )) { ?>
-		<div class="col-xs-12 text-center testimonial-module">
+		<div class="col-xs-12 text-center testimonial-module item">
 			<img src="<?php echo get_theme_mod( 'testimonial_section_image_3' ); ?>" class="img-responsive center-block">
 			<i class="fa fa-quote-left"></i>
 			<p><?php echo get_theme_mod( 'testimonial_section_client_message_3' ); ?></p>
 		</div> <!-- /col-xs-12 text-center testimonial-module -->
 		<?php } ?>
+		</div> <!-- /carousel-inner -->
+		<!-- Left and right controls -->
+		    <a class="left carousel-control" href="#testimonial-section" role="button" data-slide="prev">
+		      <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+		      <span class="sr-only">Previous</span>
+		    </a>
+		    <a class="right carousel-control" href="#testimonial-section" role="button" data-slide="next">
+		      <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+		      <span class="sr-only">Next</span>
+		    </a>
 	</section> <!-- .row -->
 	<?php } ?>
 	<section id="financing-section" class="row">
@@ -127,7 +128,7 @@ get_header(); ?>
 			<?php echo get_theme_mod( 'information_section_message_1' ); ?>
 		</div> <!-- /col-xs-12 text-center -->
 		<div class="col-xs-12 text-center">
-			<a href="<?php echo get_theme_mod( 'information_section_cta_link_1' ); ?>" class="btn btn-lg btn-wonka"><?php echo get_theme_mod( 'information_section_cta_text_1' ); ?></a>
+			<a href="<?php echo get_theme_mod( 'information_section_cta_link_1' ); ?>" class="btn btn-lg btn-wonka" target="_blank"><?php echo get_theme_mod( 'information_section_cta_text_1' ); ?></a>
 		</div> <!-- /col-xs-12 text-center -->
 	</section> <!-- .row -->
 
@@ -143,8 +144,6 @@ get_header(); ?>
 		</div> <!-- /col-xs-12 text-center -->
 	</section> <!-- .row -->
 
-	
-
 	<section id="about-section" class="row">
 		<div class="col-xs-12 text-center">
 			<h2><?php echo get_theme_mod( 'about_section_title' ); ?></h2>
@@ -156,8 +155,6 @@ get_header(); ?>
 			<p><?php echo get_theme_mod( 'about_section_paragraph_4' ); ?></p>
 		</div> <!-- /col-xs-12 text-center -->
 	</section> <!-- /about-section -->
-
-</main> <!-- #main -->
-
+	</main><!-- /container-fluid -->
 <?php
 get_footer();

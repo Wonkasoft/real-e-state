@@ -54,6 +54,39 @@ position: relative;
 	height: 120px;
 }
 
+/* MAIN CONTENT */
+#main {
+	position: relative;
+	display: block;
+	padding-bottom: $footer-height;
+	section {
+		min-height: 400px;
+	}
+}
+
+.home #main {
+	section {
+		padding: 1% 15%;
+		&:first-child {
+			padding: 0;
+			h2 {
+				font-size: 2em;
+			}
+		}
+		h2 {
+			font-size: 2.3em;
+			font-family: $header-font;
+		}
+		&:nth-child(odd) {
+			background: $header-color;
+			color: #fff;
+			h2 {
+				color: #fff;
+			}
+		}
+	}
+}
+
 #above-fold {
 	position: relative;
 	#header-image-wrap {
@@ -66,10 +99,10 @@ position: relative;
 	}
 }
 
-#main {
+section#under-header {
 	position: relative;
-	display: block;
-	padding-bottom: $footer-height;
+	min-height: 165px;
+	background: $header-color;
 }
 
 .btn-wonka {

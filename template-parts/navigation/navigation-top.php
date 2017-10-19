@@ -1,9 +1,9 @@
 <?php
 /**
- *  This file is for setting up the top navigation on the page.
- *  @package  real_e_state
- *  @version  1.0.0 [<description>]
- *  @since  1.0.0 [<description>]
+ *  This file is the Template for setting up the top navigation on the page.
+ *  @package  real-e-state
+ *  @version  1.0.0 
+ *  @since  1.0.0 
  */
 ?>
 <div class="col-xs-12">
