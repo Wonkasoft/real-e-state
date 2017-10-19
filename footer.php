@@ -4,7 +4,7 @@
 	<footer id="e-state-footer" class="container">
 		<div class="row">
 			<div class="col-xs-12">
-				<div class="col-xs-12 col-sm-3">
+				<div class="col-xs-6 col-sm-3">
 					<h4 class="footer-headers">Buyers</h4>
 					<div id="footer-1-wrap">
 					<?php
@@ -19,7 +19,7 @@
 					?>
 					</div> <!-- /footer-1-menu -->
 				</div><!-- /col-xs-12 -->
-				<div class="col-xs-12 col-sm-3">
+				<div class="col-xs-6 col-sm-3">
 					<h4 class="footer-headers">Sellers</h4>
 					<div id="footer-2-wrap">
 					<?php
@@ -34,7 +34,7 @@
 					?>
 					</div> <!-- /footer-2-menu -->
 				</div><!-- /col-xs-12 -->
-				<div class="col-xs-12 col-sm-3">
+				<div class="col-xs-6 col-sm-3">
 					<h4 class="footer-headers">Resources</h4>
 					<div id="footer-3-wrap">
 					<?php
@@ -49,7 +49,7 @@
 					?>
 					</div> <!-- /footer-3-menu -->
 				</div><!-- /col-xs-12 -->
-				<div class="col-xs-12 col-sm-3">
+				<div class="col-xs-6 col-sm-3">
 					<h4 class="footer-headers">Join Our Mailing List</h4>
 					<div id="footer-4">
 						<form>
