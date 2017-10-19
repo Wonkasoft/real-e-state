@@ -30,7 +30,7 @@ $header-font: Bodoni MT;
 @import 'top-navigation.scss';
 
 /* FOOTER HEIGHT */
-$footer-height: 315px;
+$footer-height: 328px;
 
 /* page setup */
 html, body {
@@ -57,7 +57,7 @@ position: relative;
 #above-fold {
 	position: relative;
 	#header-image-wrap {
-			max-height: 600px;
+			max-height: 700px;
 			width: 100%;
 			overflow: hidden;
 		img {
@@ -69,7 +69,7 @@ position: relative;
 #main {
 	position: relative;
 	display: block;
-	padding-bottom: $footer-height + 15;
+	padding-bottom: $footer-height;
 }
 
 .btn-wonka {

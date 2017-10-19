@@ -36,7 +36,7 @@
 #main {
 	section {
 		min-height: 400px;
-		padding: 3% 15%;
+		padding: 1% 15%;
 		&:first-child {
 			padding: 0;
 			h2 {
@@ -46,6 +46,13 @@
 		h2 {
 			font-size: 2.3em;
 			font-family: $header-font;
+		}
+		&:nth-child(odd) {
+			background: $header-color;
+			color: #fff;
+			h2 {
+				color: #fff;
+			}
 		}
 	}
 }
@@ -58,13 +65,14 @@
 		i {
 			position: relative;
 			font-size: 4rem;
-			color: #000;
-			transition: all .1s ease-in-out;
+			color: rgba(0,0,0,0.2);
+			transition: all .2s ease-in-out;
 			top: 0;
 		}
 		&:hover {
 			i {
 				top: -3px;
+				color: #E4AA50;
 				-webkit-text-shadow: 0px 1px 1px rgba(0,0,0,0.7);
 				text-shadow: 0px 1px 1px rgba(0,0,0,0.7);
 			}
@@ -73,21 +81,27 @@
 }
 /* END FIRST SECTION */
 
-/* COLORED SECTIONS */
-#search-section, #financing-section, #information-section-2 {
-	background: $header-color;
-	color: #fff;
-	h2 {
-		color: #fff;
-	}
-}
-/* END COLORED SECTIONS */
-
 /* SEARCH SECTION */
 
 /* END SEARCH SECTION */
 
 /* TESTIMONIALS SECTION */
+#testimonial-section {
+	height: 480px;
+	overflow: hidden;
+	.testimonial-module {
+		height: 340px;
+		img {
+			padding: 15px;
+			width: 20rem;
+			border-radius: 50%;
+		}
+		p {
+			width: 40%;
+			margin: auto;
+		}
+	}
+}
 
 /* END TESTIMONIALS SECTION */
 
@@ -118,6 +132,7 @@
 		border-top: 1px solid rgba(255,255,255,0.8);
 		.powered > span {
 			display: block;
+			font-size: 1.5rem;
 			&:first-child {
 				display: inline-block;
 				&:hover .wonkasoft-logo {
@@ -164,6 +179,7 @@
 		font-size: 1.5rem;
 		a {
 			color: #fff;
+			font-weight: 300;
 			transition: all .2s ease-in-out;
 			&:hover {
 				text-decoration: none;
@@ -195,6 +211,5 @@
 		}
 	}
 }
-
 
 /* END FOOTER AREA */

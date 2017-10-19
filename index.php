@@ -34,7 +34,7 @@ get_header(); ?>
 	<section id="first-section" class="row">
 		<div class="col-xs-12 text-center">
 			<h2><?php echo get_theme_mod( 'first_section_title' ); ?></h2>
-			<div class="col-xs-6 col-xs-offset-3 first-section-message">
+			<div class="col-xs-6 col-xs-offset-3 section-message">
 				<p>
 					<?php echo get_theme_mod( 'first_section_message' ); ?>		
 				</p>
@@ -72,33 +72,43 @@ get_header(); ?>
 			?>
 		</div> <!-- /col-xs-12 text-center -->
 	</section> <!-- .row -->
-
+	<?php if (get_theme_mod( 'testimonial_section_title' )) {
+	?>
 	<section id="testimonial-section" class="row">
 		<div class="col-xs-12 text-center">
 			<h2><?php echo get_theme_mod( 'testimonial_section_title' ); ?></h2>
 		</div> <!-- /col-xs-12 text-center -->
-		<div class="col-xs-12 text-center">
+		<div class="col-xs-12 text-center section-message">
 			<?php echo get_theme_mod( 'testimonial_section_message' ); ?>
 		</div> <!-- /col-xs-12 text-center -->
-		<div class="col-xs-12 col-md-4 text-center">
+		<?php if (get_theme_mod( 'testimonial_section_client_message_1' )) { ?>
+		<div class="col-xs-12 text-center testimonial-module">
 			<img src="<?php echo get_theme_mod( 'testimonial_section_image_1' ); ?>" class="img-responsive center-block">
-			<?php echo get_theme_mod( 'testimonial_section_client_message_1' ); ?>
-		</div> <!-- /col-xs-12 col-md-4 text-center -->
-		<div class="col-xs-12 col-md-4 text-center">
+			<i class="fa fa-quote-left"></i>
+			<p><?php echo get_theme_mod( 'testimonial_section_client_message_1' ); ?></p>
+		</div> <!-- /col-xs-12 text-center testimonial-module -->
+		<?php } ?>
+		<?php if (get_theme_mod( 'testimonial_section_client_message_2' )) { ?>
+		<div class="col-xs-12 text-center testimonial-module">
 			<img src="<?php echo get_theme_mod( 'testimonial_section_image_2' ); ?>" class="img-responsive center-block">
-			<?php echo get_theme_mod( 'testimonial_section_client_message_2' ); ?>
-		</div> <!-- /col-xs-12 col-md-4 text-center -->
-		<div class="col-xs-12 col-md-4 text-center">
+			<i class="fa fa-quote-left"></i>
+			<p><?php echo get_theme_mod( 'testimonial_section_client_message_2' ); ?></p>
+		</div> <!-- /col-xs-12 text-center testimonial-module -->
+		<?php } ?>
+		<?php if (get_theme_mod( 'testimonial_section_client_message_3' )) { ?>
+		<div class="col-xs-12 text-center testimonial-module">
 			<img src="<?php echo get_theme_mod( 'testimonial_section_image_3' ); ?>" class="img-responsive center-block">
-			<?php echo get_theme_mod( 'testimonial_section_client_message_3' ); ?>
-		</div> <!-- /col-xs-12 col-md-4 text-center -->
+			<i class="fa fa-quote-left"></i>
+			<p><?php echo get_theme_mod( 'testimonial_section_client_message_3' ); ?></p>
+		</div> <!-- /col-xs-12 text-center testimonial-module -->
+		<?php } ?>
 	</section> <!-- .row -->
-
+	<?php } ?>
 	<section id="financing-section" class="row">
 		<div class="col-xs-12 text-center">
 			<h2><?php echo get_theme_mod( 'financing_section_title' ); ?></h2>
 		</div> <!-- /col-xs-12 text-center -->
-		<div class="col-xs-12 text-center">
+		<div class="col-xs-12 text-center section-message">
 			<?php
 			echo get_theme_mod( 'financing_section_message' );
 			?>
@@ -113,7 +123,7 @@ get_header(); ?>
 		<div class="col-xs-12 text-center">
 			<h2><?php echo get_theme_mod( 'information_section_title_1' ); ?></h2>
 		</div> <!-- /col-xs-12 text-center -->
-		<div class="col-xs-12 text-center">
+		<div class="col-xs-12 text-center section-message">
 			<?php echo get_theme_mod( 'information_section_message_1' ); ?>
 		</div> <!-- /col-xs-12 text-center -->
 		<div class="col-xs-12 text-center">
@@ -125,7 +135,7 @@ get_header(); ?>
 		<div class="col-xs-12 text-center">
 			<h2><?php echo get_theme_mod( 'information_section_title_2' ); ?></h2>
 		</div> <!-- /col-xs-12 text-center -->
-		<div class="col-xs-12 text-center">
+		<div class="col-xs-12 text-center section-message">
 			<?php echo get_theme_mod( 'information_section_message_2' ); ?>
 		</div> <!-- /col-xs-12 text-center -->
 		<div class="col-xs-12 text-center">
@@ -139,7 +149,7 @@ get_header(); ?>
 		<div class="col-xs-12 text-center">
 			<h2><?php echo get_theme_mod( 'about_section_title' ); ?></h2>
 		</div> <!-- /col-xs-12 text-center -->
-		<div class="col-xs-12 text-center">
+		<div class="col-xs-12 text-center section-message">
 			<p><?php echo get_theme_mod( 'about_section_paragraph_1' ); ?></p>
 			<p><?php echo get_theme_mod( 'about_section_paragraph_2' ); ?></p>
 			<p><?php echo get_theme_mod( 'about_section_paragraph_3' ); ?></p>

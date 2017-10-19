@@ -619,6 +619,6 @@ function real_e_state_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function real_e_state_customize_preview_js() {
-	wp_enqueue_script( 'real-e-state-customizer', get_template_directory_uri() . 'assets/js/customizer.js', array( 'customize-preview' ), '20171012', true );
+	wp_enqueue_script( 'real-e-state-customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), '20171012', true );
 }
 add_action( 'customize_preview_init', 'real_e_state_customize_preview_js' );
