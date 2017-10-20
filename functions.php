@@ -52,7 +52,7 @@ function real_e_state_setup() {
 
 	// This is the Top Complete Menu and used in the template-parts/navigation/navigation-top.php file
 	register_nav_menus( array(
-		'top-complete' => esc_html__( 'Top Complete Menu', 'real-e-state' ),
+		'top-mobile' => esc_html__( 'Top Mobile Menu', 'real-e-state' ),
 	) );
 
 	// This menu is on the footer for the explore menu and used in the footer.php file

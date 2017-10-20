@@ -35,6 +35,7 @@
 /* FIRST SECTION */
 #social-icons {
 	list-style-type: none;
+	padding: 0;
 	li {
 		display: inline-block;
 		padding: 15px;
@@ -63,7 +64,7 @@
 
 /* TESTIMONIALS SECTION */
 #testimonial-section {
-	height: 480px;
+	height: 460px;
 	overflow: hidden;
 	.testimonial-module {
 		height: 375px;
@@ -71,10 +72,6 @@
 			padding: 15px;
 			width: 20rem;
 			border-radius: 50%;
-		}
-		p {
-			width: 40%;
-			margin: auto;
 		}
 	}
 	.carousel-control {
@@ -97,6 +94,9 @@
 
 /* ABOUT SECTION */
 #about-section {
+	.about-image {
+		width: 500px;
+	}
 }
 
 /* END ABOUT SECTION */

@@ -11,7 +11,8 @@
 
 ?>
 
-<section id="content-section" class="container">
+<section id="content-section">
+	<div class="container">
 	<div class="row">
 		<div class="col-xs-12">
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -31,4 +32,5 @@
 			</article><!-- #post-## -->
 		</div> <!-- /col-xs-12 -->
 	</div> <!-- /row -->
+	</div> <!-- /container-->
 </section> <!-- /#content-section -->

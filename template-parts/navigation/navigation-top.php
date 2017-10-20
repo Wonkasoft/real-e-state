@@ -6,7 +6,7 @@
  *  @since  1.0.0 
  */
 ?>
-<div class="col-xs-12 hidden-xs hidden-sm">
+<div class="col-xs-12 hidden-xs">
 	<div class="col-xs-5 text-right">
 		<div id="top-left-menu">
 		<?php
@@ -43,7 +43,7 @@
 	</div><!-- /col-xs-5 -->
 </div><!-- /col-xs-12 -->
 
-<div class="col-xs-12 hidden-md hidden-lg full-width">
+<div class="col-xs-12 hidden-sm hidden-md hidden-lg full-width">
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -63,11 +63,11 @@
     </div>
     <?php
 			wp_nav_menu( array ( 
-				'theme_location' 	=> 'top-complete',
-				'menu_id' 				=> 'top-complete-nav',
+				'theme_location' 	=> 'top-mobile',
+				'menu_id' 				=> 'top-mobile-nav',
 				'menu_class' 				=> 'nav navbar-nav',
 				'container' 			=> 'div',
-				'container_class' => 'collapse navbar-collapse menu-top-complete',
+				'container_class' => 'collapse navbar-collapse menu-top-mobile',
 				'container_id' => 'navbar-collapse-1',
 				'echo'						=> true,
 			) );

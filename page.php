@@ -14,14 +14,17 @@ get_header(); ?>
 	} else { 
 		// If not home page parse this
 		?>
-		<section id="under-header" class="container-fluid hidden-xs">
+		<section id="under-header" class="hidden-xs">
+			<div class="container-fluid">
 			<div class="row">
 				<div class="col-xs-12">
 
 				</div> <!-- /col-xs-12 -->
 			</div> <!-- /row -->
-	</section> <!-- /container-fluid -->
-		<section id="content-section" class="container-fluid">
+			</div> <!-- /container-fluid -->
+	</section> <!-- #under-header -->
+		<section id="content-section">
+			<div class="container-fluid">
 			<div class="row">
 				<div class="col-xs-12">
 			<?php
@@ -38,6 +41,7 @@ get_header(); ?>
 			?>
 			</div> <!-- /col-xs-12 -->
 			</div> <!-- /row -->
+			</div> <!-- /container-fluid -->
 		</section> <!-- /#content-section -->
 
 		<?php 
