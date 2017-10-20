@@ -66,7 +66,7 @@
 	height: 480px;
 	overflow: hidden;
 	.testimonial-module {
-		height: 340px;
+		height: 375px;
 		img {
 			padding: 15px;
 			width: 20rem;
@@ -108,57 +108,68 @@
 	background: linear-gradient(-245deg, $footer-color 0%, $footer-light 100%);
 	color: #ffffff;
 	font-weight: 100;
-	> .row {
-		display: block;
-		padding: 8px;
-		border-top: 1px solid rgba(255,255,255,0.8);
-		.powered > span {
+	.container-fluid {
+		> .row {
 			display: block;
-			font-size: 1.5rem;
-			&:first-child {
-				display: inline-block;
-				&:hover .wonkasoft-logo {
-					animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-					transform: translate3d(0, 0, 0);
-					backface-visibility: hidden;
-					perspective: 1000px;
-				}
-				a {
-					color: #fff;
-					transition: all .2s ease-in-out;
-					&:hover {
-						text-decoration: none;
-						color: #E4AA50;
+			padding: 8px;
+			border-top: 1px solid rgba(255,255,255,0.8);
+			.powered {
+				padding-left: 40px;
+				> span {
+					display: block;
+					font-size: 1.3rem;
+					&:first-child {
+						display: inline-block;
+						&:hover .wonkasoft-logo {
+							animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+							transform: translate3d(0, 0, 0);
+							backface-visibility: hidden;
+							perspective: 1000px;
+						}
+						a {
+							color: #fff;
+							transition: all .2s ease-in-out;
+							&:hover {
+								text-decoration: none;
+								color: #E4AA50;
+							}
+						}
+					}
+					img.wonkasoft-logo {
+						display: inline-block;
+						position: relative;
+						vertical-align: text-bottom;
+						max-width: 20px;
+						transition: all .2s ease-in-out;
 					}
 				}
 			}
-			img.wonkasoft-logo {
-				display: inline-block;
-				position: relative;
-				vertical-align: text-bottom;
-				transition: all .2s ease-in-out;
-			}
-		}
-		&:first-child {
-			border-top: none;
-			min-height: 230px;
-			div > div {
-				min-width: 230px;
-				.footer-headers {
-					text-align: left;
-					padding-left: 2.5em;
-				}
-				&:last-of-type .footer-headers {
-					text-align: center;
-					padding-left: 0;
+			&:first-child {
+				border-top: none;
+				> div > div {
+					min-width: 230px;
+					min-height: 238px;
+					.footer-headers {
+						text-align: left;
+						padding-left: 2.5em;
+					}
+					&:last-of-type .footer-headers {
+						text-align: center;
+						padding-left: 0;
+					}
 				}
 			}
+			.footer-logo {
+				padding: 15px;
+				width: 300px;
+			}
 		}
-	}
+	}	
 	.footer-menus {
 		list-style-type: circle;
 		padding-left: 4em;
 		font-size: 1.5rem;
+		transition: all .2s ease-in-out;
 		a {
 			color: #fff;
 			font-weight: 300;
@@ -167,6 +178,9 @@
 				text-decoration: none;
 				color: #E4AA50;
 			}
+		}
+		@media screen and ( max-width: 1024px ) and ( -webkit-min-device-pixel-ratio: 2) {
+			line-height: 3rem;
 		}
 	}
 	#footer-4 {

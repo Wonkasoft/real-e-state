@@ -578,10 +578,59 @@ $wp_customize->add_control( new WP_Customize_Control(
 	) ) );
 }
 
+// About Image Setting
+	$wp_customize->add_setting( 'about_image' , array(
+		'default'   => '',
+		'transport' => 'refresh',
+	) );
+
+	// About Image Control
+	$wp_customize->add_control( new WP_Customize_Image_Control( 
+		$wp_customize, 
+		'about_image', 
+		array(
+		'label'      	=> __( 'About Image ', 'real-e-state' ),
+		'section'    	=> 'about_section',
+		'setting'   	=> 'about_image',
+		'description'	=> 'Choose an image for about section',
+	) ) );
+
 /**
  * End of About Me Section
  */
 
+/**
+ *
+ * Add Footer Section
+ * @since 1.0.0 [<Add About Me Section>]
+ * 
+ */
+
+$wp_customize->add_section( 'footer_section' , array(
+	'title'				=> __( 'Footer Section', 'real-e-state' ),
+	'priority'		=> 36,
+) );
+
+// Footer Logo Setting
+	$wp_customize->add_setting( 'footer_logo' , array(
+		'default'   => '',
+		'transport' => 'refresh',
+	) );
+
+	// Footer Logo Control
+	$wp_customize->add_control( new WP_Customize_Image_Control( 
+		$wp_customize, 
+		'footer_logo', 
+		array(
+		'label'      	=> __( 'Footer Logo', 'real-e-state' ),
+		'section'    	=> 'footer_section',
+		'setting'   	=> 'footer_logo',
+		'description'	=> 'Choose an image for Footer section',
+	) ) );
+
+/**
+ * End of Footer Section
+ */
 
 $wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 $wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';

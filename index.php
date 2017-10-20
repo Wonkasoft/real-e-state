@@ -154,6 +154,7 @@ get_header(); ?>
 			<p><?php echo get_theme_mod( 'about_section_paragraph_2' ); ?></p>
 			<p><?php echo get_theme_mod( 'about_section_paragraph_3' ); ?></p>
 			<p><?php echo get_theme_mod( 'about_section_paragraph_4' ); ?></p>
+			<p><img src="<?php echo get_theme_mod( 'about_image' ); ?>" class="img-responsive about-image" /></p>
 		</div> <!-- /col-xs-12 text-center -->
 	</section> <!-- /about-section -->
 

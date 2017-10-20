@@ -29,36 +29,67 @@ $header-font: Bodoni MT;
 /* Top Nav import */
 @import 'top-navigation.scss';
 
-/* FOOTER HEIGHT */
-$footer-height: 328px;
 
 /* page setup */
 html, body {
 margin: 0;
 padding: 0;
+height: 100%;
 } 
 
 body {
 font-family: $theme-font;
-font-size: 2em;
+font-size: 1.5em;
 font-weight: 400;
-width: 100%;
-height: 100%;
-position: relative;
+}
+
+#page-wrap {
+	min-height: 100%;
+	position: relative;
+}
+
+.full-width {
+	padding: 0;
+}
+
+nav.navbar {
+	&.navbar-default {
+		background-color: $header-color;
+		border: none;
+		width: 100%;
+		margin-bottom: 0;
+		z-index: 100;
+		.navbar-header {
+			height: 75px;
+		}
+		.navbar-nav {
+			> li {
+				> a {
+					color: #fff;
+				}
+			}
+		}
+	}
+	.navbar-brand {
+		width: 50%;
+	}
 }
 
 #masthead {
-	position: absolute;
+	position: relative;
 	font-weight: 700;
 	display: block;
-	height: 120px;
+	width: 100%;
+	@media screen and ( min-width: 768px ) {
+		position: absolute;
+	}
 }
 
 /* MAIN CONTENT */
 #main {
 	position: relative;
 	display: block;
-	padding-bottom: $footer-height;
+	transition: all .2s ease-in-out;
 	section {
 		min-height: 400px;
 	}
@@ -66,7 +97,7 @@ position: relative;
 
 .home #main {
 	section {
-		padding: 1% 15%;
+		font-size: 2rem;
 		&:first-child {
 			padding: 0;
 			h2 {
@@ -89,6 +120,7 @@ position: relative;
 
 #above-fold {
 	position: relative;
+	z-index: 0;
 	#header-image-wrap {
 			max-height: 700px;
 			width: 100%;
@@ -101,8 +133,13 @@ position: relative;
 
 section#under-header {
 	position: relative;
-	min-height: 165px;
-	background: $header-color;
+	min-height: 75px;
+	background: transparent;
+	z-index: 0;
+	@media screen and ( min-width: 768px ) {
+		min-height: 125px;
+		background: $header-color;
+	}
 }
 
 .btn-wonka {
@@ -121,10 +158,7 @@ a.logo-link {
 	position: relative;
 	z-index: 5;
 	display: block;
-	padding: 15px;
-	img {
-		width: 85%;
-	}
+	padding-top: 15px;
 }
 
 .header-message {
@@ -148,7 +182,7 @@ a.logo-link {
 	width: 100%;
 	bottom: 0;
 	clear: both;
-	height: $footer-height;
+	transition: all .2s ease-in-out;
 }
 /* end page setup */
 

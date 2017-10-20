@@ -7,8 +7,8 @@
  */
 $header_image = ( !get_theme_mod( 'featured_header_image' ) ) ? get_template_directory_uri() . '/assets/images/house-image.jpg': get_theme_mod( 'featured_header_image' );
 get_header(); ?>
-<main id="main" class="container-fluid">
-<section id="above-fold" class="row">
+<main id="main">
+<section id="above-fold" class="container-fluid">
 		<div id="header-image-wrap">
 			<img src="<?php echo $header_image; ?>" class="header-img" alt="Header Image" />
 			<div class="col-xs-4 header-message text-center"><h2><?php echo get_theme_mod( 'header_message' ); ?></h2>
@@ -19,9 +19,10 @@ get_header(); ?>
 				<a href="<?php echo $header_cta_link; ?>" class="btn btn-lg btn-wonka"><?php echo $header_cta_text; ?></a>
 			</div><!-- /col-xs-12 -->
 		</div> <!-- /header-image-wrap -->
-	</section> <!-- .row -->
+	</section> <!-- .container-fluid -->
 	
-	<section id="first-section" class="row">
+	<section id="first-section" class="container-fluid">
+		<div class="row">
 		<div class="col-xs-12 text-center">
 			<h2><?php echo get_theme_mod( 'first_section_title' ); ?></h2>
 			<div class="col-xs-6 col-xs-offset-3 section-message">
@@ -48,9 +49,10 @@ get_header(); ?>
 				</ul>
 			</div><!-- /first-section-message -->
 		</div> <!-- /col-xs-12 text-center -->
-	</section> <!-- .row -->
+	</div> <!-- /row -->
+	</section> <!-- .container-fluid -->
 
-	<section id="search-section" class="row">
+	<section id="search-section" class="container-fluid">
 		<div class="col-xs-12 text-center">
 			<h2><?php echo get_theme_mod( 'search_section_title' ); ?></h2>
 		</div> <!-- /col-xs-12 text-center -->
@@ -61,10 +63,12 @@ get_header(); ?>
 			 endif;
 			?>
 		</div> <!-- /col-xs-12 text-center -->
-	</section> <!-- .row -->
+	</section> <!-- .container-fluid -->
 	<?php if (get_theme_mod( 'testimonial_section_title' )) {
 	?>
-	<section id="testimonial-section" class="row carousel slide" data-ride="carousel">
+	<section id="testimonial-section" class="container-fluid">
+		<div id="testimonial-slider" class="row carousel slide" data-ride="carousel">
+			<div class="col-xs-12">
 		<div class="col-xs-12 text-center">
 			<h2><?php echo get_theme_mod( 'testimonial_section_title' ); ?></h2>
 		</div> <!-- /col-xs-12 text-center -->
@@ -95,17 +99,20 @@ get_header(); ?>
 		<?php } ?>
 		</div> <!-- /carousel-inner -->
 		<!-- Left and right controls -->
-		    <a class="left carousel-control" href="#testimonial-section" role="button" data-slide="prev">
+		    <a class="left carousel-control" href="#testimonial-slider" role="button" data-slide="prev">
 		      <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
 		      <span class="sr-only">Previous</span>
 		    </a>
-		    <a class="right carousel-control" href="#testimonial-section" role="button" data-slide="next">
+		    <a class="right carousel-control" href="#testimonial-slider" role="button" data-slide="next">
 		      <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
 		      <span class="sr-only">Next</span>
 		    </a>
-	</section> <!-- .row -->
+		  </div> <!-- /col-xs-12 -->
+		  </div> <!-- /row -->
+	</section> <!-- .container-fluid -->
 	<?php } ?>
-	<section id="financing-section" class="row">
+	<section id="financing-section" class="container-fluid">
+		<div class="row">
 		<div class="col-xs-12 text-center">
 			<h2><?php echo get_theme_mod( 'financing_section_title' ); ?></h2>
 		</div> <!-- /col-xs-12 text-center -->
@@ -118,9 +125,11 @@ get_header(); ?>
 			<a href="<?php echo get_theme_mod( 'financing_section_cta_link' ); ?>" class="btn btn-lg btn-wonka">
 				<?php echo get_theme_mod( 'financing_section_cta_text' ); ?></a>
 		</div> <!-- /col-xs-12 text-center -->
-	</section> <!-- .row -->
+		</div> <!-- /row -->
+	</section> <!-- .container-fluid -->
 
-	<section id="information-section-1" class="row">
+	<section id="information-section-1" class="container-fluid">
+		<div class="row">
 		<div class="col-xs-12 text-center">
 			<h2><?php echo get_theme_mod( 'information_section_title_1' ); ?></h2>
 		</div> <!-- /col-xs-12 text-center -->
@@ -130,9 +139,11 @@ get_header(); ?>
 		<div class="col-xs-12 text-center">
 			<a href="<?php echo get_theme_mod( 'information_section_cta_link_1' ); ?>" class="btn btn-lg btn-wonka" target="_blank"><?php echo get_theme_mod( 'information_section_cta_text_1' ); ?></a>
 		</div> <!-- /col-xs-12 text-center -->
-	</section> <!-- .row -->
+		</div> <!-- /row -->
+	</section> <!-- .container-fluid -->
 
-	<section id="information-section-2" class="row">
+	<section id="information-section-2" class="container-fluid">
+		<div class="row">
 		<div class="col-xs-12 text-center">
 			<h2><?php echo get_theme_mod( 'information_section_title_2' ); ?></h2>
 		</div> <!-- /col-xs-12 text-center -->
@@ -142,9 +153,11 @@ get_header(); ?>
 		<div class="col-xs-12 text-center">
 			<a href="<?php echo get_theme_mod( 'information_section_cta_link_1' ); ?>" class="btn btn-lg btn-wonka"><?php echo get_theme_mod( 'information_section_cta_text_2' ); ?></a>
 		</div> <!-- /col-xs-12 text-center -->
-	</section> <!-- .row -->
+		</div> <!-- /row -->
+	</section> <!-- .container-fluid -->
 
-	<section id="about-section" class="row">
+	<section id="about-section" class="container">
+		<div class="row">
 		<div class="col-xs-12 text-center">
 			<h2><?php echo get_theme_mod( 'about_section_title' ); ?></h2>
 		</div> <!-- /col-xs-12 text-center -->
@@ -153,8 +166,10 @@ get_header(); ?>
 			<p><?php echo get_theme_mod( 'about_section_paragraph_2' ); ?></p>
 			<p><?php echo get_theme_mod( 'about_section_paragraph_3' ); ?></p>
 			<p><?php echo get_theme_mod( 'about_section_paragraph_4' ); ?></p>
+			<p><img src="<?php echo get_theme_mod( 'about_image' ); ?>" class="img-responsive about-image center-block" /></p>
 		</div> <!-- /col-xs-12 text-center -->
+		</div> <!-- /row -->
 	</section> <!-- /about-section -->
-	</main><!-- /container-fluid -->
+	</main><!-- /#main -->
 <?php
 get_footer();

@@ -40,14 +40,19 @@ function real_e_state_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in five locations.
-	// This is the Primary Main Title Menu and used in the template-parts/navigation/navigation-top.php file
+	// This is the Top Left Menu and used in the template-parts/navigation/navigation-top.php file
 	register_nav_menus( array(
 		'top-left' => esc_html__( 'Top Left Menu', 'real-e-state' ),
 	) );
 
-	// This is the Sub Menu and used in the header.php file
+	// This is the Top Right Menu and used in the template-parts/navigation/navigation-top.php file
 	register_nav_menus( array(
 		'top-right' => esc_html__( 'Top Right Menu', 'real-e-state' ),
+	) );
+
+	// This is the Top Complete Menu and used in the template-parts/navigation/navigation-top.php file
+	register_nav_menus( array(
+		'top-complete' => esc_html__( 'Top Complete Menu', 'real-e-state' ),
 	) );
 
 	// This menu is on the footer for the explore menu and used in the footer.php file
@@ -141,6 +146,7 @@ function real_e_state_scripts() {
 	 	// enqueue bootstrap js
 		wp_enqueue_script( $bootstrapjs, get_template_directory_uri() . '/assets/js/bootstrap.min.js', array( 'jquery' ), '3.3.7', true );
 	} 
+	wp_enqueue_script( 'real-e-state-js', get_template_directory_uri() . '/assets/js/real-e-state.min.js', array(), '1.0.0', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'real_e_state_scripts' );

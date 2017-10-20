@@ -7,17 +7,23 @@
  */
 
 get_header(); ?>
-<main id="main" class="container-fluid">
+<main id="main">
 	<?php
 	if ( locate_template('template-parts/navigation/content-page.php') != '' ) {
 		get_template_part( 'template-parts/navigation/content', 'page' );
 	} else { 
 		// If not home page parse this
 		?>
-		<section id="under-header" class="row">
-		
-	</section> <!-- .row -->
-		<section id="content-section">
+		<section id="under-header" class="container-fluid hidden-xs">
+			<div class="row">
+				<div class="col-xs-12">
+
+				</div> <!-- /col-xs-12 -->
+			</div> <!-- /row -->
+	</section> <!-- /container-fluid -->
+		<section id="content-section" class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
 			<?php
 			while ( have_posts() ) : the_post();
 
@@ -30,9 +36,12 @@ get_header(); ?>
 
 			endwhile; // End of the loop.
 			?>
-		</section> <!-- /content-section -->
+			</div> <!-- /col-xs-12 -->
+			</div> <!-- /row -->
+		</section> <!-- /#content-section -->
 
-		<?php } ?>
-</main><!-- /container-fluid -->
+		<?php 
+	} ?>
+</main><!-- /#main -->
 <?php
 get_footer();
