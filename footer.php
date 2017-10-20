@@ -39,6 +39,38 @@
 							'container_class' => 'menu-footer-2-container',
 							'echo'						=> true,
 						) );
+
+						if ( get_theme_mod( 'footer_social_facebook' ) ) {
+							?>
+							<div class="col-xs-3 text-center">
+								<a href="<?php echo get_theme_mod( 'footer_social_facebook' ); ?>" target="_blank" /><i class="fa fa-facebook-square"></i></a>
+							</div>
+					<?php 
+					}
+
+						if ( get_theme_mod( 'footer_social_twitter' ) ) {
+							?>
+							<div class="col-xs-3 text-center">
+								<a href="<?php echo get_theme_mod( 'footer_social_twitter' ); ?>" target="_blank" /><i class="fa fa-twitter-square"></i></a>
+							</div>
+					<?php 
+					}
+
+						if ( get_theme_mod( 'footer_social_instagram' ) ) {
+							?>
+							<div class="col-xs-3 text-center">
+								<a href="<?php echo get_theme_mod( 'footer_social_instagram' ); ?>" target="_blank" /><i class="fa fa-instagram"></i></a>
+							</div>
+					<?php 
+					}
+
+						if ( get_theme_mod( 'footer_social_yelp' ) ) {
+							?>
+							<div class="col-xs-3 text-center">
+								<a href="<?php echo get_theme_mod( 'footer_social_yelp' ); ?>" target="_blank" /><i class="fa fa-yelp"></i></a>
+							</div>
+					<?php 
+					}
 					?>
 					</div> <!-- /footer-2-menu -->
 				</div><!-- /col-xs-12 -->
