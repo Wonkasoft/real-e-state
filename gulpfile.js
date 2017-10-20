@@ -92,10 +92,10 @@ gulp.task('js', function () {
 
 		.pipe(browserSync.stream({match: '**/*.js'}))
 
-              .pipe(notify({
-                message: "✔︎ JS task complete",
-                onLast: true
-              }));
+    .pipe(notify({
+      message: "✔︎ JS task complete",
+      onLast: true
+    }));
  
 });
 
