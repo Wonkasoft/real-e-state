@@ -17,8 +17,10 @@
 }
 
 /* THEME COLORS */
-$header-color: #3C6595;
-$header-dark: #143B6A;
+$header-color: #5f5356;
+$header-dark: #231f20;
+$btn-color: #731843;
+$link-hover: #731843;
 $footer-light: #1F2134;
 $footer-color: #343646;
 
@@ -120,6 +122,8 @@ nav.navbar {
 		}
 		&:nth-child(odd) {
 			background: $header-color;
+			background: -webkit-linear-gradient(-214deg, $header-color 0%, $header-dark 100%);
+			background: linear-gradient(-214deg, $header-color 0%, $header-dark 100%);
 			color: #fff;
 			h2 {
 				color: #fff;
@@ -132,12 +136,23 @@ nav.navbar {
 	position: relative;
 	z-index: 0;
 	#header-image-wrap {
-			max-height: 700px;
-			width: 100%;
-			padding: 0;
-			overflow: hidden;
+		max-height: 700px;
+		width: 100%;
+		padding: 0;
+		overflow: hidden;
 		img {
 			width: 100%;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			display: block;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			background: rgba(0,0,0,0.3);
+			background: -webkit-linear-gradient(0deg, rgba(0,0,0,0.3) 75%, transparent 100%);
+			background: linear-gradient(0deg, rgba(0,0,0,0.3) 75%, transparent 100%);
 		}
 	}
 	.header-message {
@@ -174,7 +189,7 @@ section#under-header {
 }
 
 .btn-wonka {
-	background-color: #88c88b;
+	background-color: $btn-color;
 	border-radius: 0;
 	margin: 15px 0;
 	font-size: 1.5rem;
