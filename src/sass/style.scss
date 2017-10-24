@@ -59,8 +59,15 @@
 /* END FIRST SECTION */
 
 /* SEARCH SECTION */
-.more_search_option {
-	color: #fff;
+.wpl_search_from_box.wpl-search-sidebar {
+	.search_submit_box {
+		.wpl_search_widget_submit {
+			background: $btn-color;
+		}
+	}
+	.more_search_option {
+		color: #fff;
+	}
 }
 /* END SEARCH SECTION */
 
