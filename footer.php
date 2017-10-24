@@ -15,7 +15,7 @@
 							'menu_class' => 'footer-menus',
 							'container' 			=> 'div',
 							'container_class' => 'menu-footer-1-container',
-							'echo'						=> true,
+							'echo'						=> true
 						) );
 					
 						if ( get_theme_mod( 'footer_logo' ) ) {
@@ -37,7 +37,7 @@
 							'menu_class' => 'footer-menus',
 							'container' 			=> 'div',
 							'container_class' => 'menu-footer-2-container',
-							'echo'						=> true,
+							'echo'						=> true
 						) );
 
 						if ( get_theme_mod( 'footer_social_facebook' ) ) {
