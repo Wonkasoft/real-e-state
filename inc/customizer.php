@@ -628,6 +628,78 @@ $wp_customize->add_section( 'footer_section' , array(
 		'description'	=> 'Choose an image for Footer section',
 	) ) );
 
+	// Footer Socials Facebook Setting
+	$wp_customize->add_setting( 'footer_social_facebook' , array(
+		'default'   => '',
+		'transport' => 'refresh',
+	) );
+
+	// Footer Socials Facebook Control
+	$wp_customize->add_control( new WP_Customize_Control( 
+		$wp_customize, 
+		'footer_social_facebook', 
+		array(
+		'label'      	=> __( 'Footer Social Facebook', 'real-e-state' ),
+		'section'    	=> 'footer_section',
+		'setting'   	=> 'footer_social_facebook',
+		'type'				=> 'text',
+		'description'	=> 'Add Facebook URL for Footer section',
+	) ) );
+
+	// Footer Socials Twitter Setting
+	$wp_customize->add_setting( 'footer_social_twitter' , array(
+		'default'   => '',
+		'transport' => 'refresh',
+	) );
+
+	// Footer Socials Twitter Control
+	$wp_customize->add_control( new WP_Customize_Control( 
+		$wp_customize, 
+		'footer_social_twitter', 
+		array(
+		'label'      	=> __( 'Footer Social Twitter', 'real-e-state' ),
+		'section'    	=> 'footer_section',
+		'setting'   	=> 'footer_social_twitter',
+		'type'				=> 'text',
+		'description'	=> 'Add Twitter URL for Footer section',
+	) ) );
+
+	// Footer Socials Instagram Setting
+	$wp_customize->add_setting( 'footer_social_instagram' , array(
+		'default'   => '',
+		'transport' => 'refresh',
+	) );
+
+	// Footer Socials Instagram Control
+	$wp_customize->add_control( new WP_Customize_Control( 
+		$wp_customize, 
+		'footer_social_instagram', 
+		array(
+		'label'      	=> __( 'Footer Social Instagram', 'real-e-state' ),
+		'section'    	=> 'footer_section',
+		'setting'   	=> 'footer_social_instagram',
+		'type'				=> 'text',
+		'description'	=> 'Add Instagram URL for Footer section',
+	) ) );
+
+		// Footer Socials Yelp Setting
+	$wp_customize->add_setting( 'footer_social_yelp' , array(
+		'default'   => '',
+		'transport' => 'refresh',
+	) );
+
+	// Footer Socials Yelp Control
+	$wp_customize->add_control( new WP_Customize_Control( 
+		$wp_customize, 
+		'footer_social_yelp', 
+		array(
+		'label'      	=> __( 'Footer Social Yelp', 'real-e-state' ),
+		'section'    	=> 'footer_section',
+		'setting'   	=> 'footer_social_yelp',
+		'type'				=> 'text',
+		'description'	=> 'Add Yelp URL for Footer section',
+	) ) );
+
 /**
  * End of Footer Section
  */
