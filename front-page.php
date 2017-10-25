@@ -154,7 +154,7 @@ get_header(); ?>
 			<?php echo get_theme_mod( 'information_section_message_1' ); ?>
 		</div> <!-- /col-xs-12 text-center -->
 		<div class="col-xs-12 text-center">
-			<a href="<?php echo get_theme_mod( 'information_section_cta_link_1' ); ?>" class="btn btn-lg btn-wonka" target="_blank"><?php echo get_theme_mod( 'information_section_cta_text_1' ); ?></a>
+			<a href="<?php echo get_theme_mod( 'information_section_cta_link_1' ); ?>" class="btn btn-lg btn-wonka"><?php echo get_theme_mod( 'information_section_cta_text_1' ); ?></a>
 		</div> <!-- /col-xs-12 text-center -->
 		</div> <!-- /row -->
 		</div> <!-- /container -->

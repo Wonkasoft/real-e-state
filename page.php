@@ -24,7 +24,7 @@ get_header(); ?>
 			</div> <!-- /container-fluid -->
 	</section> <!-- #under-header -->
 		<section id="content-section">
-			<div class="container-fluid">
+			<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
 			<?php
