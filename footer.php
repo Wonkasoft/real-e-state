@@ -39,10 +39,12 @@
 							'container_class' => 'menu-footer-2-container',
 							'echo'						=> true
 						) );
-
+						?>
+						<div class="row">
+						<?php 
 						if ( get_theme_mod( 'footer_social_facebook' ) ) {
 							?>
-							<div class="col-xs-3 text-center">
+							<div class="col-xs-3 text-center social-links">
 								<a href="<?php echo get_theme_mod( 'footer_social_facebook' ); ?>" target="_blank" /><i class="fa fa-facebook-square"></i></a>
 							</div>
 					<?php 
@@ -50,7 +52,7 @@
 
 						if ( get_theme_mod( 'footer_social_twitter' ) ) {
 							?>
-							<div class="col-xs-3 text-center">
+							<div class="col-xs-3 text-center social-links">
 								<a href="<?php echo get_theme_mod( 'footer_social_twitter' ); ?>" target="_blank" /><i class="fa fa-twitter-square"></i></a>
 							</div>
 					<?php 
@@ -58,7 +60,7 @@
 
 						if ( get_theme_mod( 'footer_social_instagram' ) ) {
 							?>
-							<div class="col-xs-3 text-center">
+							<div class="col-xs-3 text-center social-links">
 								<a href="<?php echo get_theme_mod( 'footer_social_instagram' ); ?>" target="_blank" /><i class="fa fa-instagram"></i></a>
 							</div>
 					<?php 
@@ -66,13 +68,14 @@
 
 						if ( get_theme_mod( 'footer_social_yelp' ) ) {
 							?>
-							<div class="col-xs-3 text-center">
+							<div class="col-xs-3 text-center social-links">
 								<a href="<?php echo get_theme_mod( 'footer_social_yelp' ); ?>" target="_blank" /><i class="fa fa-yelp"></i></a>
 							</div>
 					<?php 
 					}
 					?>
-					</div> <!-- /footer-2-menu -->
+				</div> <!-- /row -->
+					</div> <!-- /#footer-2-wrap -->
 				</div><!-- /col-xs-12 -->
 				<div class="col-xs-12 col-sm-6 col-md-3">
 					<h4 class="footer-headers">Resources</h4>
@@ -84,7 +87,7 @@
 							'menu_class' => 'footer-menus',
 							'container' 			=> 'div',
 							'container_class' => 'menu-footer-3-container',
-							'echo'						=> true,
+							'echo'						=> true
 						) );
 					?>
 					</div> <!-- /footer-3-menu -->

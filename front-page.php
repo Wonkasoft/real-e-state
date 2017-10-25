@@ -34,7 +34,7 @@ get_header(); ?>
 				<p>
 					<?php echo get_theme_mod( 'first_section_message' ); ?>		
 				</p>
-				<ul id="social-icons">
+				<ul id="social-shares">
 					<li><?php if ( get_theme_mod( 'first_section_twitter' ) ) { 
 						?>
 						<a href="<?php echo get_theme_mod( 'first_section_twitter' ); ?>"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>  

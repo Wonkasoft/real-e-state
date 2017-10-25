@@ -17,12 +17,13 @@
 }
 
 /* THEME COLORS */
-$header-color: #5f5356;
-$header-dark: #231f20;
-$btn-color: #731843;
-$link-hover: #731843;
-$footer-light: #1F2134;
-$footer-color: #343646;
+$section-light: #68003D;
+$section-color: #361227;
+$btn-color: #891e52;
+$btn-hover: #9a2860;
+$link-hover: #9a2860;
+$footer-light: #0b1b43;
+$footer-color: #050d20;
 
 /* THEME FONTS */
 $theme-font: Roboto, sans-serif;
@@ -56,7 +57,7 @@ font-weight: 400;
 
 nav.navbar {
 	&.navbar-default {
-		background-color: $header-color;
+		background-color: $section-color;
 		border: none;
 		width: 100%;
 		margin-bottom: 0;
@@ -121,9 +122,9 @@ nav.navbar {
 			}
 		}
 		&:nth-child(odd) {
-			background: $header-color;
-			background: -webkit-linear-gradient(-214deg, $header-color 0%, $header-dark 100%);
-			background: linear-gradient(-214deg, $header-color 0%, $header-dark 100%);
+			background: $section-color;
+			background: -webkit-linear-gradient(-214deg, $section-light 0%, $section-color 100%);
+			background: linear-gradient(-214deg, $section-light 0%, $section-color 100%);
 			color: #fff;
 			h2 {
 				color: #fff;
@@ -184,19 +185,23 @@ section#under-header {
 	z-index: 0;
 	@media screen and ( min-width: 768px ) {
 		min-height: 125px;
-		background: $header-color;
+		background: $section-color;
 	}
 }
 
 .btn-wonka {
 	background-color: $btn-color;
+	overflow: hidden;
+	position: relative;
 	border-radius: 0;
 	margin: 15px 0;
 	font-size: 1.5rem;
 	text-transform: uppercase;
-	color: #000;
+	color: #fff;
+	border: none;
 	transition: all .2s ease-in-out;
 	&:hover {
+		background-color: $btn-hover;
 		color: #fff;
 	}
 }
