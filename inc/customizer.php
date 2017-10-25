@@ -700,6 +700,24 @@ $wp_customize->add_section( 'footer_section' , array(
 		'description'	=> 'Add Yelp URL for Footer section',
 	) ) );
 
+		// Footer Cal BRE number Setting
+	$wp_customize->add_setting( 'footer_bre_number' , array(
+		'default'   => '',
+		'transport' => 'refresh',
+	) );
+
+	// Footer Cal BRE number Control
+	$wp_customize->add_control( new WP_Customize_Control( 
+		$wp_customize, 
+		'footer_bre_number', 
+		array(
+		'label'      	=> __( 'Cal BRE #', 'real-e-state' ),
+		'section'    	=> 'footer_section',
+		'setting'   	=> 'footer_bre_number',
+		'type'				=> 'text',
+		'description'	=> 'Add Cal BRE number for Footer section',
+	) ) );
+
 /**
  * End of Footer Section
  */
