@@ -23,6 +23,11 @@
 <div id="page-wrap" class="site">
 	<header id="masthead" class="container-fluid" role="banner">
 		<div class="row">
+		<div class="col-xs-12 text-right">
+				<span class="cal-bre-num">Cal BRE# <?php echo get_theme_mod( 'footer_bre_number' ); ?></span>
+			</div><!-- /.col-xs-12 -->
+		</div> <!-- /.row -->
+		<div class="row">
 				<div class="navigation-top">
 					<div class="wrap">
 						<?php 
