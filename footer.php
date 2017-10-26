@@ -119,9 +119,9 @@
 				<span>Powered by <a href="https://wonkasoft.com" target="_blank">Wonkasoft <img class="img-responsive wonkasoft-logo" src="<?php echo get_template_directory_uri() . '/assets/images/wonkacircle@34.png'; ?>" alt="Wonkasoft Logo" /></a></span>
 				<span>© <?php echo date('Y');?> All Rights Reserved - <a href="<?php echo esc_url(home_url('/privacy-policy')); ?>">Privacy Policy</a></span>
 			</div><!-- .col-xs-3 -->
-			<div class="col-xs-12 col-sm-6 text-center">
-				<span></span>
-			</div><!-- .col-xs-9 -->
+			<div class="col-xs-12 col-sm-6 text-right">
+				<span>Cal BRE# <?php echo get_theme_mod( 'footer_bre_number' ); ?></span>
+			</div><!-- .col-xs-12 col-sm-6 -->
 		</div><!-- .row -->
 	</div> <!-- .container -->
 	</footer>
