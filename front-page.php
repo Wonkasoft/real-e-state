@@ -37,19 +37,19 @@ get_header(); ?>
 				<ul id="social-shares">
 					<li><?php if ( get_theme_mod( 'first_section_twitter' ) ) { 
 						?>
-						<a href="<?php echo get_theme_mod( 'first_section_twitter' ); ?>"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>  
+						<a href="<?php echo get_theme_mod( 'first_section_twitter' ); ?>" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>  
 						<?php } ?></li>
 					<li><?php if ( get_theme_mod( 'first_section_facebook' ) ) { 
 						?>
-						<a href="<?php echo get_theme_mod( 'first_section_facebook' ); ?>"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>  
+						<a href="<?php echo get_theme_mod( 'first_section_facebook' ); ?>" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>  
 						<?php } ?></li>
 					<li><?php if ( get_theme_mod( 'first_section_instagram' ) ) { 
 						?>
-						<a href="<?php echo get_theme_mod( 'first_section_instagram' ); ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>  
+						<a href="<?php echo get_theme_mod( 'first_section_instagram' ); ?>" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>  
 						<?php } ?></li>
 					<li><?php if ( get_theme_mod( 'first_section_yelp' ) ) { 
 						?>
-						<a href="<?php echo get_theme_mod( 'first_section_yelp' ); ?>"><i class="fa fa-yelp" aria-hidden="true"></i></a>  
+						<a href="<?php echo get_theme_mod( 'first_section_yelp' ); ?>" target="_blank"><i class="fa fa-yelp" aria-hidden="true"></i></a>  
 						<?php } ?></li>
 				</ul>
 			</div><!-- /first-section-message -->
