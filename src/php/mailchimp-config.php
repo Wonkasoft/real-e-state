@@ -8,5 +8,5 @@
  * 
  */
 // Put your MailChimp API and List ID here
-$api_key = 'b041c292a51bda319f461e6ffb5a915b-us16';
-$list_id = 'b167b4aacf';
+$api_key = '';
+$list_id = '';
