@@ -95,6 +95,10 @@ nav.navbar {
 	}
 	> .row:first-child {
 		padding-top: 15px;
+		background: $section-color;
+		.cal-bre-num {
+			text-align: right;
+		}
 	}
 }
 

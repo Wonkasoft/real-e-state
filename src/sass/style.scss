@@ -134,10 +134,29 @@
 		}
 	}
 	.wpl_carousel_container.current-listings {
-		padding: 15px 225px;
+		padding: 15px 30px;
+		@media screen and ( min-width: 992px ) {
+			padding: 15px 225px;
+		}
 		.simple_list {
 			li {
 				box-shadow: 2px 2px 6px 2px rgba(0,0,0,0.3);
+				.left_section, .right_section {
+					display: block;
+					@media screen and ( min-width: 992px ) {
+						display: table-cell;
+					}
+				}
+				.left_section {
+					width: 100%;
+					transition: all 0.2s ease-in-out;
+					@media screen and ( min-width: 992px ) {
+						width: 50%;
+					}
+					span {
+						width: 100%;
+					}
+				}
 				.right_section {
 					a {
 						color: #fff;
@@ -188,10 +207,14 @@
 /* CONTENT SECTION */
 body .calendly-badge-widget {
 	bottom: 48px;
+	display: none;
+	@media screen and ( min-width: 768px ) {
+		display: table-cell;
+	}
 }
 #content-section {
 	.calendly-inline-widget {
-		height: 600px;
+		height: 625px;
 	}
 }
 /* END CONTENT SECTION */
@@ -256,6 +279,11 @@ body .calendly-badge-widget {
 			border-top: 1px solid rgba(255,255,255,0.8);
 			.powered {
 				padding-left: 40px;
+				text-align: center;
+				transition: all 0.2s ease-in-out;
+				@media screen and ( min-width: 768px ) {
+					text-align: left;
+				}
 				> span {
 					display: block;
 					font-size: 1.3rem;
@@ -303,6 +331,13 @@ body .calendly-badge-widget {
 			.footer-logo {
 				padding: 15px;
 				width: 300px;
+			}
+			.cal-bre-num {
+				text-align: center;
+				transition: all 0.2s ease-in-out;
+				@media screen and ( min-width: 768px ) {
+					text-align: right;
+				}
 			}
 		}
 	}	

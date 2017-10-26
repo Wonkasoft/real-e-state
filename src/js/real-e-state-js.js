@@ -11,11 +11,11 @@
 	}
 
 	window.onload = function () {
-		var powered = document.createElement('span');
-		var poweredBy = document.createTextNode('powered by Wonkasoft');
-		powered.appendChild(poweredBy);
-		var appBtn = document.getElementsByClassName('calendly-badge-content')[0];
-		appBtn.appendChild(powered);
+		var featured_span = document.getElementsByClassName( 'simple_list' )[0].getElementsByTagName( 'span' )[0];
+		var featured_img = featured_span.getElementsByTagName( 'img' )[0];
+		featured_span.style.width = '100%';
+		featured_span.style.height = '100%';
+		featured_img.style.width = '100%';
 	};
 	
 })();
