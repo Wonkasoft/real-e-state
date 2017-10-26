@@ -12,12 +12,12 @@
  * This loads the list id 
  * 
  */
-include( './mailchimp-config.php' );
+include( 'mailchimp-config.php' );
 /**
  * This will load the MailChimp class and namespace
  * 
  */
-include( './mailchimpapi.php' );
+include( 'mailchimpapi.php' );
 /**
  * This calls for the namespace
  * 
