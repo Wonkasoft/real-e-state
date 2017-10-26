@@ -110,6 +110,11 @@
 			</div><!-- .col-xs-12 col-sm-6 -->
 		</div><!-- .row -->
 	</div> <!-- .container -->
+	<!-- Calendly badge widget begin -->
+	<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+	<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+	<script type="text/javascript">Calendly.initBadgeWidget({url: 'https://calendly.com/your-agent-romel/30min', text: 'Schedule Appointment', color: '#4d5055', branding: false});</script>
+	<!-- Calendly badge widget end -->
 	</footer>
 	<input type="hidden" id="facebook-app-id" value="<?php echo get_theme_mod( 'fb_app_setting'); ?>">
 <script>
