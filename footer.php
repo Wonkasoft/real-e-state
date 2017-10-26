@@ -95,21 +95,7 @@
 				<div class="col-xs-12 col-sm-6 col-md-3">
 					<h4 class="footer-headers">Join Our Mailing List</h4>
 					<div id="footer-4">
-						<form action="<?php echo get_template_directory_uri() .'/src/php/process-form.php';?>" method="POST">
-						<div class="form-group col-xs-6">
-						  <label for="first-name">First Name:</label>
-						  <input type="text" name="fname" class="form-control" id="first-name">
-						</div>
-						<div class="form-group col-xs-6">
-						  <label for="last-name">Last Name:</label>
-						  <input type="text" name="lname" class="form-control" id="last-name">
-						</div>
-						  <div class="form-group col-xs-12">
-						    <label for="email">Email address:</label>
-						    <input type="email" name="email" class="form-control" id="email">
-						  <button type="submit" name="submit" class="btn btn-default">Join Mailing List</button>
-						  </div>
-						</form>
+						<?php echo do_shortcode( '[wpforms id="234" title="false" description="false"]' ); ?>
 					</div> <!-- /footer-4-menu -->
 				</div><!-- /col-xs-12 -->
 			</div><!-- /col-xs-12 -->
