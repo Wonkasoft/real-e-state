@@ -3,8 +3,8 @@
  * Real E State Theme Customizer
  *
  * @package real_e_state
- * @version  1.0.0 [<description>]
- * @since  1.0.0 [<description>]
+ * @version  1.0.0
+ * @since  1.0.0
  * 
  */
 /**
@@ -17,7 +17,7 @@ function real_e_state_customize_register( $wp_customize ) {
 	/**
 	 * 
 	 * Main Header Section
-	 * @since  1.0.0 [<description>]
+	 * @since  1.0.0
 	 * 
 	 */
 	// Adding customizer section for main header section
@@ -104,7 +104,7 @@ function real_e_state_customize_register( $wp_customize ) {
 	/**
 	 * 
 	 * First Section under the fold
-	 * @since 1.0.0 [<First Section under the fold>]
+	 * @since 1.0.0
 	 * 
 	 */
 	// Add First Section
@@ -228,7 +228,7 @@ function real_e_state_customize_register( $wp_customize ) {
 /**
  * 
  * Search Section
- * @since 1.0.0 [<Start of Search Section>]
+ * @since 1.0.0
  * 
  */
 // Add Search Section
@@ -261,7 +261,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 /**
  *
  * Add Testimonials section
- * @since  1.0.0 [<Add Testimonials section>]
+ * @since  1.0.0
  * 
  */
 $wp_customize->add_section( 'testimonial_section' , array(
@@ -351,7 +351,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 /**
  *
  * Add Financing Section
- * @since  1.0.0 [<Add Financing Section>]
+ * @since  1.0.0
  * 
  */
 $wp_customize->add_section( 'financing_section' , array(
@@ -439,7 +439,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 /**
  *
  * Add Information Section 1 & 2
- * @since  1.0.0 [<Add Information Section>]
+ * @since  1.0.0
  * 
  */
 
@@ -530,7 +530,7 @@ for ( $i=1; $i < 3 ; $i++ ) {
 /**
  *
  * Add About Me Section
- * @since 1.0.0 [<Add About Me Section>]
+ * @since 1.0.0
  * 
  */
 
@@ -602,7 +602,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 /**
  *
  * Add Footer Section
- * @since 1.0.0 [<Add About Me Section>]
+ * @since 1.0.0
  * 
  */
 
@@ -702,6 +702,40 @@ $wp_customize->add_section( 'footer_section' , array(
 
 /**
  * End of Footer Section
+ */
+
+/**
+ *
+ * Add Facebook App ID Section
+ * @since 1.0.0 [<Add About Me Section>]
+ * 
+ */
+
+$wp_customize->add_section( 'fb_app_section' , array(
+	'title'				=> __( 'Facebook App Section', 'real-e-state' ),
+	'priority'		=> 37,
+) );
+
+// Footer Socials Instagram Setting
+	$wp_customize->add_setting( 'fb_app_setting' , array(
+		'default'   => '',
+		'transport' => 'refresh',
+	) );
+
+	// Footer Socials Instagram Control
+	$wp_customize->add_control( new WP_Customize_Control( 
+		$wp_customize, 
+		'fb_app_setting', 
+		array(
+		'label'      	=> __( 'Footer Social Instagram', 'real-e-state' ),
+		'section'    	=> 'fb_app_section',
+		'setting'   	=> 'fb_app_setting',
+		'type'				=> 'text',
+		'description'	=> 'Add Fackbook App ID to intergrate Facebook',
+	) ) );
+
+/**
+ * End of Facebook App ID Section
  */
 
 $wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
