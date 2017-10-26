@@ -125,6 +125,27 @@
 		</div><!-- .row -->
 	</div> <!-- .container -->
 	</footer>
+	<input type="hidden" id="facebook-app-id" value="<?php echo get_theme_mod( 'fb_app_setting'); ?>">
+<script>
+ var FB_app_id = document.getElementById('facebook-app-id').value;
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : FB_app_id,
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v2.10'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 </div><!-- End page-wrap -->
 <?php wp_footer(); ?>
 </body>
