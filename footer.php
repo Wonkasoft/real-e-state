@@ -95,7 +95,7 @@
 				<div class="col-xs-12 col-sm-6 col-md-3">
 					<h4 class="footer-headers">Join Our Mailing List</h4>
 					<div id="footer-4">
-						<form action="<?php echo get_template_directory() .'/src/php/process-form.php';?>" method="POST">
+						<form action="<?php echo get_template_directory_uri() .'/src/php/process-form.php';?>" method="POST">
 						<div class="form-group col-xs-6">
 						  <label for="first-name">First Name:</label>
 						  <input type="text" name="fname" class="form-control" id="first-name">
