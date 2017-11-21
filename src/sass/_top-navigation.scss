@@ -6,7 +6,7 @@
 #top-left-menu, #top-right-menu {
 	position: relative;
 	top: 10px;
-	z-index: 5;
+	z-index: 55;
 	transition: all 0.2s ease-in-out;
 	@media screen and ( min-width: 992px ) {
 		top: 50px;
