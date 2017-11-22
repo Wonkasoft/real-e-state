@@ -10,8 +10,6 @@
  */
 /* End Media Queries */
 @import 'above-fold.scss';
-@import 'footer.scss';
-
 
 /* ANIMATIONS */
 @keyframes shake {
@@ -358,9 +356,16 @@ form.wpforms-form {
 		}
 	}
 }
+.entry-content {
+	.testimonial-img {
+		border-radius: 50%;
+	}
+}
 /* END SUB PAGES */
 
 /* FOOTER AREA */
+@import 'footer.scss';
+
 #e-state-footer {
 	background: $footer-color;
 	background: -webkit-linear-gradient(-214deg, $footer-light 0%, $footer-color 100%);
