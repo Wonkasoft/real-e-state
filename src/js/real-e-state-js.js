@@ -1,19 +1,6 @@
 ( function() {
 'use strict';
-	var foot_height = document.getElementById('e-state-footer').clientHeight;
-
-	window.addEventListener( 'resize', get_footer_height );
-
-	function get_footer_height() {
-
-		foot_height = document.getElementById('e-state-footer').clientHeight;
-		document.getElementById('main').style.paddingBottom = foot_height + 'px';
-
-	}
-
 	window.onload = function () {
-
-		get_footer_height();
 
 		if ( document.querySelector( '.simple_list' ) ) {
 

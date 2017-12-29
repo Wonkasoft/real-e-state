@@ -227,10 +227,44 @@ body .calendly-badge-widget {
 		display: table-cell;
 	}
 }
-#content-section {
-	padding-bottom: 15px;
-	.calendly-inline-widget {
-		height: 625px;
+.blog {
+	
+	#content-section {
+		padding-bottom: 15px;
+		.calendly-inline-widget {
+			height: 625px;
+		}
+		article {
+			position: relative;
+			display: inline-block;
+			clear: both;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			.post-img {
+				width: 100%;
+			}
+			.single-post-img-wrap {
+				position: relative;
+				display: inline-block;
+				max-height: 450px;
+				max-width: 100%;
+				overflow: hidden;
+				.single-post-img {
+					position: relative;
+					max-width: 100%;
+					left: 50%;
+					@include prefix( transform, translate( -50%, 0 ), webkit moz o );
+				}
+			}
+		}
+		#comment {
+			max-width: 100%;
+		}
+	}
+}
+#commentform {
+	label {
+		margin: 0 15px 15px 0;
 	}
 }
 /* END CONTENT SECTION */
