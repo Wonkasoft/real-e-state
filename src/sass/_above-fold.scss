@@ -9,6 +9,16 @@
  * @Media ( min-width: $xlarge )
  */
 /* End Media Queries */
+/* MIXINS */
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+
+// Output standard non-prefixed declaration
+#{$property}: $value;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
 
 @font-face {
@@ -230,7 +240,7 @@ a.logo-link {
 	position: absolute;
 	display: block;
 	width: 100%;
-	bottom: 0;
+	top: 100%;
 	clear: both;
 	transition: all .2s ease-in-out;
 }
