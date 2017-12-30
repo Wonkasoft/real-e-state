@@ -4,66 +4,56 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @subpackage Real_e_State
+ * @package real-e-state
  * @since 1.0.0
  * @version 1.0.0
  */
 
+$post_img = ( get_the_post_thumbnail_url() ) ? get_the_post_thumbnail_url(): wp_get_attachment_url( get_theme_mod( 'custom_logo' ) );
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( 'post' === get_post_type() ) {
-			echo '<div class="entry-meta">';
-				if ( is_single() ) {
-					real_e_state_posted_on();
-				} else {
-					echo real_e_state_time_link();
-					real_e_state_edit_link();
-				};
-			echo '</div><!-- .entry-meta -->';
-		};
-
-		if ( is_single() ) {
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		} elseif ( is_front_page() && is_home() ) {
-			the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
-		} else {
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		}
-		?>
-	</header><!-- .entry-header -->
-
-	<?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : ?>
-		<div class="post-thumbnail">
-			<a href="<?php the_permalink(); ?>">
-				<?php the_post_thumbnail( 'real_e_state-featured-image' ); ?>
+	<?php if ( !is_single() ) : ?>
+		<div class="col-xs-12 col-md-4">
+			<a href="<?php esc_url( the_permalink() ); ?>" target="_self">
+				<img src="<?php echo $post_img; ?>" class="post-img" />
 			</a>
-		</div><!-- .post-thumbnail -->
+		</div>
+		<div class="col-xs-12 col-md-8">
+			<header class="entry-header">
+				<a class="blog-title-link" href="<?php esc_url( the_permalink() ); ?>"  target="_self">
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				</a>
+			</header><!-- .entry-header -->
+			<div class="entry-content">
+				<?php
+				the_excerpt( $post->ID ); ?>
+				<a href="<?php esc_url( the_permalink() ); ?>" class="btn btn-lg btn-wonka">
+				READ MORE</a>
+
+				<?php
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . __( 'Pages:', 'real-e-state' ),
+					'after'  => '</div>',
+				) );
+				?>
+			</div><!-- .entry-content -->
+		</div> <!-- /col-xs-12 col-md-8 -->
+	<?php else : ?>
+		<div class="single-post-img-wrap">
+			<img src="<?php echo $post_img; ?>" class="single-post-img" />
+		</div>
+		<header class="entry-header">
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		</header><!-- .entry-header -->
+		<div class="entry-content">
+			<?php
+			the_content();
+
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'real-e-state' ),
+				'after'  => '</div>',
+			) );
+			?>
+		</div><!-- .entry-content -->
 	<?php endif; ?>
-
-	<div class="entry-content">
-		<?php
-		/* translators: %s: Name of current post */
-		the_content( sprintf(
-			__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'real_e_state' ),
-			get_the_title()
-		) );
-
-		wp_link_pages( array(
-			'before'      => '<div class="page-links">' . __( 'Pages:', 'real_e_state' ),
-			'after'       => '</div>',
-			'link_before' => '<span class="page-number">',
-			'link_after'  => '</span>',
-		) );
-		?>
-	</div><!-- .entry-content -->
-
-	<?php
-	if ( is_single() ) {
-		real_e_state_entry_footer();
-	}
-	?>
-
 </article><!-- #post-## -->

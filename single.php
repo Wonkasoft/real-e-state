@@ -9,12 +9,6 @@
 
 get_header(); ?>
 <main id="main">
-	<?php
-	if ( locate_template('template-parts/navigation/content-page.php') != '' ) {
-		get_template_part( 'template-parts/navigation/content', 'page' );
-	} else { 
-		// If not home page parse this
-		?>
 		<section id="under-header" class="hidden-xs">
 			<div class="container-fluid">
 			<div class="row">
@@ -31,7 +25,7 @@ get_header(); ?>
 			<?php
 			while ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/post/single', 'post' );
+				get_template_part( 'template-parts/post/content', get_post_format() );
 
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :
@@ -44,9 +38,6 @@ get_header(); ?>
 			</div> <!-- /row -->
 			</div> <!-- /container-fluid -->
 		</section> <!-- /#content-section -->
-
-		<?php 
-	} ?>
 </main><!-- /#main -->
 <?php
 get_footer();

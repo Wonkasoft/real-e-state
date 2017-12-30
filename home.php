@@ -18,13 +18,17 @@ get_header(); ?>
 			</div> <!-- /container-fluid -->
 	</section> <!-- #under-header -->
 		<section id="content-section">
-			<div class="container">
+			<div class="container-fluid">
 			<div class="row">
 				<div class="col-xs-12">
 			<?php
+			$i = 0;
 			while ( have_posts() ) : the_post();
-
-				get_template_part( 'template-parts/page/content', 'page' );
+				$i++;
+				if ( $i !== 1 ) {
+					?> <hr /> <?php
+				}
+				get_template_part( 'template-parts/post/content', get_post_format() );
 
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :
