@@ -240,20 +240,27 @@ body .calendly-badge-widget {
 			clear: both;
 			margin-top: 15px;
 			margin-bottom: 15px;
-			.post-img {
-				width: 100%;
-			}
-			.single-post-img-wrap {
-				position: relative;
-				display: inline-block;
-				max-height: 450px;
-				max-width: 100%;
-				overflow: hidden;
-				.single-post-img {
+			& > div {
+				& > a {
 					position: relative;
-					max-width: 100%;
-					left: 50%;
-					@include prefix( transform, translate( -50%, 0 ), webkit moz o );
+					display: inline-block;
+					.post-img {
+						width: 100%;
+					}
+				}
+				.entry-header {
+					.blog-title-link {
+						color: #361227;
+						@include prefix( transition, $transition-15s, webkit moz o);
+						.entry-title {
+						}
+						&:hover {
+							color: #5f1f44;
+							text-decoration: none;
+							.entry-title {
+							}
+						}
+					}
 				}
 			}
 		}
@@ -262,6 +269,57 @@ body .calendly-badge-widget {
 		}
 	}
 }
+
+.single-post {
+	article {
+		position: relative;
+		display: inline-block;
+		clear: both;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		.single-post-img-wrap {
+			position: relative;
+			display: inline-block;
+			max-height: 450px;
+			width: 100%;
+			overflow: hidden;
+			.single-post-img-sizing {
+				max-width: 800px;
+				margin: auto;
+				.single-post-img {
+					position: relative;
+					max-width: 100%;
+					left: 50%;
+					@include prefix( transform, translate( -50%, 0 ), webkit moz o );
+				}
+			}
+		}
+		.entry-content {
+			.alignleft {
+				float: left;
+				margin: 0.5em 1em 0.5em 0;
+			}
+			.alignright {
+				float: right;
+				margin: 0.5em 1em 0.5em 0;
+			}
+			.clear-fix {
+				position: relative;
+				display: block;
+				clear: both;
+			}
+			.section-wrap {
+				position: relative;
+				display: block;
+				clear: both;
+			}
+		}
+	}
+	#comment {
+		max-width: 100%;
+	}
+}
+
 #commentform {
 	label {
 		margin: 0 15px 15px 0;

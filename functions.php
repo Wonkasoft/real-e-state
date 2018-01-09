@@ -76,15 +76,14 @@ function real_e_state_setup() {
 	) );
 
 	if ( function_exists( 'register_sidebar' ) ) {
-  register_sidebar( array(
-    'name' 					=> 'Search Area Widget',
-    'before_widget' => '<div class = "search-area">',
-    'after_widget' 	=> '</div>',
-    'before_title' 	=> '<h3>',
-    'after_title' 	=> '</h3>',
-  ) );
-}
-
+	  register_sidebar( array(
+	    'name' 					=> 'Search Area Widget',
+	    'before_widget' => '<div class = "search-area">',
+	    'after_widget' 	=> '</div>',
+	    'before_title' 	=> '<h3>',
+	    'after_title' 	=> '</h3>',
+	  ) );
+	}
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -113,6 +112,7 @@ function real_e_state_setup() {
 		'flex-height' => true,
 	) );
 
+
 /**
 * Customizer additions.
 */
@@ -120,9 +120,49 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
 
 }
 
-
 endif;
 add_action( 'after_setup_theme', 'real_e_state_setup' );
+
+/**
+ * This is for adding Wonka MCE Helper element quick format. 
+ * Add mce button for editor help.
+ */
+function wonka_mce_button($buttons) {
+	array_unshift( $buttons, 'styleselect');
+	return $buttons;
+}
+add_filter( 'mce_buttons', 'wonka_mce_button');
+
+/**
+ * Adding custom elements for editor.
+ */
+function wonka_mce_helper( $init_array ) {
+	$wonka_elements = array(
+		array(
+			'title' => 'clear',
+			'block' => 'div',
+			'classes' => 'clear-fix',
+			'wrapper' => false,
+		),
+		array(
+			'title' => 'section',
+			'block' => 'div',
+			'classes' => 'section-wrap',
+			'wrapper' => true,
+		),
+	);
+	$init_array['style_formats'] = json_encode( $wonka_elements );
+	return $init_array;
+}
+add_filter( 'tiny_mce_before_init', 'wonka_mce_helper' );
+
+/**
+ * Adding editor stylesheet
+ */
+function wonka_theme_editor_styles() {
+	add_editor_style( 'editor-style.css' );
+}
+add_action( 'admin_init', 'wonka_theme_editor_styles' );
 
 /**
  * Enqueue scripts and styles.

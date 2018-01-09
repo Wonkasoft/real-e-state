@@ -40,7 +40,9 @@ $post_img = ( get_the_post_thumbnail_url() ) ? get_the_post_thumbnail_url(): wp_
 		</div> <!-- /col-xs-12 col-md-8 -->
 	<?php else : ?>
 		<div class="single-post-img-wrap">
-			<img src="<?php echo $post_img; ?>" class="single-post-img" />
+			<div class="single-post-img-sizing">
+				<img src="<?php echo $post_img; ?>" class="single-post-img" />
+			</div>
 		</div>
 		<header class="entry-header">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>

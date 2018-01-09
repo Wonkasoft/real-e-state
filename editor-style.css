@@ -1,0 +1,14 @@
+/**
+ * This is a stylesheet just for the tinyMCE text editor.
+ */
+.clear-fix {
+	position: relative;
+	display: block;
+	clear: both;
+}
+
+.section-wrap {
+	position: relative;
+	display: block;
+	clear: both;
+}

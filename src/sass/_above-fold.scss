@@ -19,17 +19,11 @@
 #{$property}: $value;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+/* TRANSITIONS */
+$transition-15s: all .15s ease-in-out;
+$transition-2s: all .2s ease-in-out;
 
-/* MIXINS */
-@mixin prefix($property, $value, $prefixes: ()) {
-  @each $prefix in $prefixes {
-    #{'-' + $prefix + '-' + $property}: $value;
-  }
- 
-  // Output standard non-prefixed declaration
-  #{$property}: $value;
-}
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
 
 @font-face {
     font-family:  'Bodoni MT';
@@ -126,7 +120,7 @@ nav.navbar {
 #main {
 	position: relative;
 	display: block;
-	transition: all .2s ease-in-out;
+	@include prefix( transition, $transition-2s, webkit moz o);
 	section {
 		min-height: 355px;
 	}
@@ -200,7 +194,7 @@ nav.navbar {
 		background: -webkit-linear-gradient(90deg, rgba(0,0,0,0.5) 0%, transparent 100%);
 		background: linear-gradient(90deg, rgba(0,0,0,0.5) 0%, transparent 100%);
 		z-index: 100;
-		transition: all .2s ease-in-out;
+		@include prefix( transition, $transition-2s, webkit moz o);
 		h2 {
 			text-align: left;
 		}
@@ -233,7 +227,7 @@ section#under-header {
 	text-transform: uppercase;
 	color: #fff;
 	border: none;
-	transition: all .2s ease-in-out;
+	@include prefix( transition, $transition-2s, webkit moz o);
 	&:hover {
 		background-color: $btn-hover;
 		color: #fff;
@@ -252,6 +246,6 @@ a.logo-link {
 	width: 100%;
 	top: 100%;
 	clear: both;
-	transition: all .2s ease-in-out;
+	@include prefix( transition, $transition-2s, webkit moz o);
 }
 /* end page setup */
