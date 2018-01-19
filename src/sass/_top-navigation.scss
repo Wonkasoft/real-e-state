@@ -3,61 +3,70 @@
 // @version 1.0.0
 // @since 1.0.0
 
-#top-left-menu, #top-right-menu {
-	position: relative;
-	top: 10px;
-	z-index: 55;
-	transition: all 0.2s ease-in-out;
-	@media screen and ( min-width: 992px ) {
-		top: 50px;
-	}
-	#top-left-nav, #top-right-nav {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		font-size: 1.2rem;
-		@media screen and ( min-width: 992px ) {
-			font-size: 1.5rem;
-		}
-		li {
-			display: inline-block;
-			a {
-				padding: 8px;
-				text-decoration: none;
-				text-transform: uppercase;
-				letter-spacing: 1px;
-				font-weight: 500;
-				white-space: nowrap;
-				color: #fff;
-				transition: all .2s ease-in-out;
-				&:hover {
-					text-decoration: none;
-					color: $link-hover;
-					text-shadow: 0px 1px 1px rgba(0,0,0,0.9);
-				}
-			}
-		}
-		.menu-item-has-children {
-			position: relative;
-			.sub-menu {
-				position:absolute;
-				padding: 0;
-				text-align: left;
-				transition: all .2s ease-in-out;
-				li {
-					overflow: hidden;
-					height: 0;
-					background: rgba(0,0,0,0.4);
-					display: block;
-					padding: 0;
-					transition: all .2s ease-in-out;
-				}
-			}
-			&:hover {
-				>.sub-menu {
-					>li {
-						height: 51px;
-						padding: 15px 8px;
+.navigation-top {
+	.wrap {
+		.flex-div {
+			display: flex;
+			align-items: flex-end;
+			> div {
+				position: relative;
+				bottom: 0;
+				#top-left-menu, #top-right-menu {
+					position: relative;
+					bottom: 8px;
+					z-index: 55;
+					@include prefix( transition, $transition-2s, webkit moz o);
+					#top-left-nav, #top-right-nav {
+						list-style-type: none;
+						margin: 0;
+						padding: 0;
+						font-size: 1.2rem;
+						@media screen and ( min-width: 992px ) {
+							font-size: 1.5rem;
+						}
+						li {
+							display: inline-block;
+							a {
+								padding: 8px;
+								text-decoration: none;
+								text-transform: uppercase;
+								letter-spacing: 1px;
+								font-weight: 300;
+								white-space: nowrap;
+								color: #fff;
+								@include prefix( transition, $transition-2s, webkit moz o);
+								&:hover {
+									text-decoration: none;
+									color: $link-hover;
+									text-shadow: 0px 1px 1px rgba(0,0,0,0.9);
+								}
+							}
+						}
+						.menu-item-has-children {
+							position: relative;
+							.sub-menu {
+								position:absolute;
+								padding: 0;
+								text-align: left;
+								@include prefix( transition, $transition-2s, webkit moz o);
+								li {
+									overflow: hidden;
+									height: 0;
+									background: rgba(0,0,0,0.4);
+									display: block;
+									padding: 0;
+									@include prefix( transition, $transition-2s, webkit moz o);
+								}
+							}
+							&:hover {
+								>.sub-menu {
+									>li {
+										height: 51px;
+										padding: 15px 8px;
+									}
+								}
+							}
+						}
 					}
 				}
 			}
@@ -67,7 +76,7 @@
 .navbar-default {
 	.navbar-toggle {
 		background-color: transparent;
-		transition: all .2s ease-in-out;
+		@include prefix( transition, $transition-2s, webkit moz o);
 		&:hover, &:focus {
 			background-color: rgba(#000, 0.4);
 		}
