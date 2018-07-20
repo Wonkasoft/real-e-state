@@ -75,15 +75,14 @@ function real_e_state_setup() {
 		'sidebar-1' => esc_html__( 'Sidebar', 'real-e-state' ),
 	) );
 
-	if ( function_exists( 'register_sidebar' ) ) {
-  register_sidebar( array(
-    'name' 					=> 'Search Area Widget',
-    'before_widget' => '<div class = "search-area">',
-    'after_widget' 	=> '</div>',
-    'before_title' 	=> '<h3>',
-    'after_title' 	=> '</h3>',
-  ) );
-}
+	register_sidebar( array(
+    	'name' 			=> __('Search Area Widget', 'real-e-state' ),
+		'id'			=> 'search-sidebar-1',
+    	'before_widget' => '<div class = "search-area">',
+    	'after_widget' 	=> '</div>',
+    	'before_title' 	=> '<h3>',
+    	'after_title' 	=> '</h3>',
+	) );
 
 
 	/*
