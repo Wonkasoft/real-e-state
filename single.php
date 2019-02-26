@@ -1,6 +1,7 @@
 <?php
 /**
- * This is the templete for the layout of all subpages
+ * The template for displaying all single posts
+ * 
  * @package real-e-state
  * @version  1.0.0 
  * @since  1.0.0 
@@ -24,7 +25,7 @@ get_header(); ?>
 			<?php
 			while ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/page/content', 'page' );
+				get_template_part( 'template-parts/post/content', get_post_format() );
 
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :

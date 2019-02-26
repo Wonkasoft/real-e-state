@@ -9,6 +9,21 @@
  * @Media ( min-width: $xlarge )
  */
 /* End Media Queries */
+/* MIXINS */
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+
+// Output standard non-prefixed declaration
+#{$property}: $value;
+}
+
+/* TRANSITIONS */
+$transition-15s: all 0.15s ease-in-out;
+$transition-2s: all 0.2s ease-in-out;
+$transition-5s: all 0.5s ease-in-out;
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
 
 @font-face {
@@ -37,13 +52,13 @@ $header-font: Bodoni MT;
 html, body {
 margin: 0;
 padding: 0;
-height: 100%;
+height: 80%;
 } 
 
 body {
 font-family: $theme-font;
 font-size: 1.5em;
-font-weight: 400;
+font-weight: 300;
 }
 
 #page-wrap {
@@ -87,14 +102,23 @@ nav.navbar {
 
 #masthead {
 	position: relative;
-	font-weight: 700;
+	font-weight: 300;
 	display: block;
 	width: 100%;
+	background-color: #361227;
+	@include prefix( transition, $transition-2s, webkit moz o);
 	@media screen and ( min-width: 768px ) {
 		position: absolute;
+		border-bottom: 1px solid #fff;
+		background: rgba(0,0,0,0.3);
+		box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.4);
+		z-index: 100;
 	}
 	> .row:first-child {
 		padding-top: 15px;
+		.cal-bre-num {
+			text-align: right;
+		}
 	}
 }
 
@@ -102,8 +126,8 @@ nav.navbar {
 #main {
 	position: relative;
 	display: block;
-	transition: all .2s ease-in-out;
-	section {
+	@include prefix( transition, $transition-2s, webkit moz o);
+	section:not(#above-fold) {
 		min-height: 355px;
 	}
 }
@@ -167,22 +191,21 @@ nav.navbar {
 		}
 	}
 	.header-message {
-		font-weight: 500;
-		position: absolute;
-		top: 15rem;
+		font-weight: 300;
+		position: relative;
+		top: 25%;
 		color: #ffffff;
 		letter-spacing: 1px;
 		background: rgba(0,0,0,0.5);
 		background: -webkit-linear-gradient(90deg, rgba(0,0,0,0.5) 0%, transparent 100%);
 		background: linear-gradient(90deg, rgba(0,0,0,0.5) 0%, transparent 100%);
 		z-index: 100;
-		transition: all .2s ease-in-out;
+		@include prefix( transition, $transition-2s, webkit moz o);
 		h2 {
 			text-align: left;
 		}
-		@media screen and ( max-width: 767px ) {
-			position: relative;
-			top: 0;
+		@media screen and ( min-width: 1124px ) {
+			position: absolute;
 		}
 	}
 
@@ -205,11 +228,13 @@ section#under-header {
 	position: relative;
 	border-radius: 0;
 	margin: 15px 0;
+	padding: 18px 16px;
 	font-size: 1.5rem;
 	text-transform: uppercase;
+	font-weight: 300;
 	color: #fff;
 	border: none;
-	transition: all .2s ease-in-out;
+	@include prefix( transition, $transition-2s, webkit moz o);
 	&:hover {
 		background-color: $btn-hover;
 		color: #fff;
@@ -218,17 +243,18 @@ section#under-header {
 
 a.logo-link {
 	position: relative;
-	z-index: 5;
+	z-index: 1;
 	display: block;
+	max-width: 285px;
+	margin: auto;
 }
 
 #e-state-footer {
 	position: absolute;
 	display: block;
 	width: 100%;
-	bottom: 0;
+	top: 100%;
 	clear: both;
-	transition: all .2s ease-in-out;
+	@include prefix( transition, $transition-2s, webkit moz o);
 }
 /* end page setup */
-

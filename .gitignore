@@ -1,7 +1,13 @@
 package-lock.json
+package.json
+gulpfile.js
 .sass-cache
 node_modules
 npm-debug.log
 .DS_Store
-~.*
-/_dist
+.phpintel
+phpcs.phar
+phpcbf.phar
+node_modules
+node_modules/*
+*.swp

@@ -6,7 +6,7 @@
  *  @since  1.0.0 
  */
 ?>
-<div class="col-xs-12 hidden-xs">
+<div class="col-xs-12 hidden-xs flex-div">
 	<div class="col-xs-5 text-right">
 		<div id="top-left-menu">
 		<?php
